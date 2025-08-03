@@ -261,7 +261,7 @@ Monitor widget performance with built-in analytics:
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+We welcome contributions! Please see our [Contributing Guide](./CONTRIBUTING.md) for details.
 
 ### Development Setup
 
@@ -281,7 +281,7 @@ swiftlint autocorrect
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
@@ -291,10 +291,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- **Documentation**: [Full Documentation](Documentation/)
+- **Documentation**: [Installation Guide](./Documentation/InstallationGuide.md) | [Usage Guide](./Documentation/UsageGuide.md) | [API Reference](./Documentation/APIReference.md)
+- **Examples**: [Basic Example](./Examples/BasicWidgetExample.swift) | [Advanced Example](./Examples/AdvancedWidgetExample.swift)
 - **Issues**: [GitHub Issues](https://github.com/muhittincamdali/iOS-Widget-Development-Kit/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/muhittincamdali/iOS-Widget-Development-Kit/discussions)
-- **Email**: support@widgetkit.dev
 
 ## 🚀 Roadmap
 
