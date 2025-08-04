@@ -283,6 +283,23 @@ swiftlint autocorrect
 
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
 
+**⭐ Star this repository if it helped you!**
+
+## 📊 Project Statistics
+
+<div align="center">
+
+[![GitHub stars](https://img.shields.io/github/stars/muhittincamdali/iOS-Widget-Development-Kit?style=social)](https://github.com/muhittincamdali/iOS-Widget-Development-Kit/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/muhittincamdali/iOS-Widget-Development-Kit?style=social)](https://github.com/muhittincamdali/iOS-Widget-Development-Kit/network)
+[![GitHub issues](https://img.shields.io/github/issues/muhittincamdali/iOS-Widget-Development-Kit)](https://github.com/muhittincamdali/iOS-Widget-Development-Kit/issues)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/muhittincamdali/iOS-Widget-Development-Kit)](https://github.com/muhittincamdali/iOS-Widget-Development-Kit/pulls)
+
+</div>
+
+## 🌟 Stargazers
+
+[![Stargazers repo roster for @muhittincamdali/iOS-Widget-Development-Kit](https://reporoster.com/stars/muhittincamdali/iOS-Widget-Development-Kit)](https://github.com/muhittincamdali/iOS-Widget-Development-Kit/stargazers)
+
 ## 🙏 Acknowledgments
 
 - Apple for WidgetKit framework
