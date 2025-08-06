@@ -1,1 +1,1 @@
-# ConfigurationAPI
+# Configuration API

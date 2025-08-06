@@ -1,1 +1,1 @@
-# DynamicIslandGuide
+# Dynamic Island Guide
