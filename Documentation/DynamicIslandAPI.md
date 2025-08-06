@@ -1,1 +1,1 @@
-# DynamicIslandAPI
+# Dynamic Island API

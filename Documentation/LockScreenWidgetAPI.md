@@ -1,1 +1,1 @@
-# LockScreenWidgetAPI
+# Lock Screen Widget API
