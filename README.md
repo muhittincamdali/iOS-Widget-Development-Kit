@@ -388,7 +388,6 @@ islandActivity.setExpandedView { context in
                 .foregroundColor(.blue)
             
             VStack(alignment: .leading) {
-                Text("Song Title")
                     .font(.headline)
                 
                 Text("Artist Name")
@@ -522,7 +521,6 @@ realTimeManager.connect(realTimeConfig) { result in
 
 ```bash
 # Clone the repository
-git clone https://github.com/muhittincamdali/iOS-Widget-Development-Kit.git
 
 # Navigate to project directory
 cd iOS-Widget-Development-Kit
@@ -540,7 +538,6 @@ Add the framework to your project:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/muhittincamdali/iOS-Widget-Development-Kit.git", from: "1.0.0")
 ]
 ```
 
@@ -742,15 +739,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center">
 
-[![GitHub stars](https://img.shields.io/github/stars/muhittincamdali/iOS-Widget-Development-Kit?style=social)](https://github.com/muhittincamdali/iOS-Widget-Development-Kit/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/muhittincamdali/iOS-Widget-Development-Kit?style=social)](https://github.com/muhittincamdali/iOS-Widget-Development-Kit/network)
-[![GitHub issues](https://img.shields.io/github/issues/muhittincamdali/iOS-Widget-Development-Kit)](https://github.com/muhittincamdali/iOS-Widget-Development-Kit/issues)
-[![GitHub pull requests](https://img.shields.io/github/issues-pr/muhittincamdali/iOS-Widget-Development-Kit)](https://github.com/muhittincamdali/iOS-Widget-Development-Kit/pulls)
-[![GitHub contributors](https://img.shields.io/github/contributors/muhittincamdali/iOS-Widget-Development-Kit)](https://github.com/muhittincamdali/iOS-Widget-Development-Kit/graphs/contributors)
-[![GitHub last commit](https://img.shields.io/github/last-commit/muhittincamdali/iOS-Widget-Development-Kit)](https://github.com/muhittincamdali/iOS-Widget-Development-Kit/commits/master)
 
 </div>
 
 ## 🌟 Stargazers
 
-[![Stargazers repo roster for @muhittincamdali/iOS-Widget-Development-Kit](https://reporoster.com/stars/muhittincamdali/iOS-Widget-Development-Kit)](https://github.com/muhittincamdali/iOS-Widget-Development-Kit/stargazers)
