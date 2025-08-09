@@ -1,5 +1,51 @@
 # Dynamic Island Guide
 
+<!-- TOC START -->
+## Table of Contents
+- [Dynamic Island Guide](#dynamic-island-guide)
+- [Introduction](#introduction)
+- [Prerequisites](#prerequisites)
+- [Getting Started](#getting-started)
+  - [1. Project Setup](#1-project-setup)
+  - [2. Import the Framework](#2-import-the-framework)
+  - [3. Initialize Island Manager](#3-initialize-island-manager)
+- [Creating Your First Dynamic Island Activity](#creating-your-first-dynamic-island-activity)
+  - [Step 1: Define Island Configuration](#step-1-define-island-configuration)
+  - [Step 2: Create Activity Instance](#step-2-create-activity-instance)
+  - [Step 3: Define Island Views](#step-3-define-island-views)
+  - [Step 4: Start Activity](#step-4-start-activity)
+- [Activity Types and Use Cases](#activity-types-and-use-cases)
+  - [Music Playback](#music-playback)
+  - [Delivery Tracking](#delivery-tracking)
+  - [Ride Sharing](#ride-sharing)
+- [Data Integration](#data-integration)
+  - [Real-Time Updates](#real-time-updates)
+  - [Background Updates](#background-updates)
+- [Interactive Elements](#interactive-elements)
+  - [Action Buttons](#action-buttons)
+  - [Gesture Recognition](#gesture-recognition)
+- [Styling and Theming](#styling-and-theming)
+  - [Custom Styling](#custom-styling)
+  - [Dynamic Theming](#dynamic-theming)
+- [Performance Optimization](#performance-optimization)
+  - [Best Practices](#best-practices)
+  - [Performance Monitoring](#performance-monitoring)
+- [Error Handling](#error-handling)
+  - [Common Errors and Solutions](#common-errors-and-solutions)
+  - [Error Handling Implementation](#error-handling-implementation)
+- [Testing](#testing)
+  - [Unit Testing](#unit-testing)
+  - [UI Testing](#ui-testing)
+- [Deployment](#deployment)
+  - [App Store Guidelines](#app-store-guidelines)
+  - [Production Checklist](#production-checklist)
+- [Troubleshooting](#troubleshooting)
+  - [Common Issues](#common-issues)
+  - [Debug Tools](#debug-tools)
+- [Conclusion](#conclusion)
+<!-- TOC END -->
+
+
 ## Introduction
 
 This guide provides comprehensive instructions for creating and implementing Dynamic Island experiences in iOS applications using the iOS Widget Development Kit. The Dynamic Island provides users with engaging, interactive experiences that seamlessly integrate with the iPhone's hardware design.

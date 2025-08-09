@@ -1,5 +1,42 @@
 # Dynamic Island API
 
+<!-- TOC START -->
+## Table of Contents
+- [Dynamic Island API](#dynamic-island-api)
+- [Overview](#overview)
+- [Core Classes](#core-classes)
+  - [DynamicIslandManager](#dynamicislandmanager)
+  - [DynamicIslandActivity](#dynamicislandactivity)
+  - [DynamicIslandConfiguration](#dynamicislandconfiguration)
+- [View Types](#view-types)
+  - [Supported View Types](#supported-view-types)
+- [Content Types](#content-types)
+  - [Basic Island Content](#basic-island-content)
+  - [Interactive Island Content](#interactive-island-content)
+- [Usage Examples](#usage-examples)
+  - [Creating a Simple Dynamic Island Activity](#creating-a-simple-dynamic-island-activity)
+  - [Creating an Interactive Dynamic Island Activity](#creating-an-interactive-dynamic-island-activity)
+- [Data Integration](#data-integration)
+  - [Real-Time Updates](#real-time-updates)
+  - [Background Updates](#background-updates)
+- [Error Handling](#error-handling)
+  - [IslandError Types](#islanderror-types)
+  - [Error Handling Example](#error-handling-example)
+- [Best Practices](#best-practices)
+  - [Performance Optimization](#performance-optimization)
+  - [Design Guidelines](#design-guidelines)
+  - [Security Considerations](#security-considerations)
+- [API Reference](#api-reference)
+  - [Methods](#methods)
+  - [Properties](#properties)
+- [Migration Guide](#migration-guide)
+  - [From iOS 15 to iOS 16+](#from-ios-15-to-ios-16)
+- [Troubleshooting](#troubleshooting)
+  - [Common Issues](#common-issues)
+  - [Debug Tips](#debug-tips)
+<!-- TOC END -->
+
+
 ## Overview
 
 The Dynamic Island API provides comprehensive functionality for creating and managing Dynamic Island experiences in iOS applications. This API enables developers to create engaging, interactive experiences that integrate seamlessly with the iPhone's Dynamic Island.

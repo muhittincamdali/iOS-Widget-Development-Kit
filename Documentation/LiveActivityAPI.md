@@ -1,5 +1,44 @@
 # Live Activity API
 
+<!-- TOC START -->
+## Table of Contents
+- [Live Activity API](#live-activity-api)
+- [Overview](#overview)
+- [Core Classes](#core-classes)
+  - [LiveActivityManager](#liveactivitymanager)
+  - [LiveActivity](#liveactivity)
+  - [LiveActivityConfiguration](#liveactivityconfiguration)
+- [Activity Types](#activity-types)
+  - [Supported Activity Types](#supported-activity-types)
+- [Content Types](#content-types)
+  - [Basic Activity Content](#basic-activity-content)
+  - [Interactive Activity Content](#interactive-activity-content)
+- [Usage Examples](#usage-examples)
+  - [Creating a Simple Live Activity](#creating-a-simple-live-activity)
+  - [Creating an Interactive Live Activity](#creating-an-interactive-live-activity)
+- [Dynamic Island Integration](#dynamic-island-integration)
+  - [Dynamic Island Views](#dynamic-island-views)
+- [Data Integration](#data-integration)
+  - [Real-Time Updates](#real-time-updates)
+  - [Background Updates](#background-updates)
+- [Error Handling](#error-handling)
+  - [ActivityError Types](#activityerror-types)
+  - [Error Handling Example](#error-handling-example)
+- [Best Practices](#best-practices)
+  - [Performance Optimization](#performance-optimization)
+  - [Design Guidelines](#design-guidelines)
+  - [Security Considerations](#security-considerations)
+- [API Reference](#api-reference)
+  - [Methods](#methods)
+  - [Properties](#properties)
+- [Migration Guide](#migration-guide)
+  - [From iOS 15 to iOS 16+](#from-ios-15-to-ios-16)
+- [Troubleshooting](#troubleshooting)
+  - [Common Issues](#common-issues)
+  - [Debug Tips](#debug-tips)
+<!-- TOC END -->
+
+
 ## Overview
 
 The Live Activity API provides comprehensive functionality for creating and managing Live Activities in iOS applications. This API enables developers to create engaging, real-time experiences that integrate with the Dynamic Island and Lock Screen.

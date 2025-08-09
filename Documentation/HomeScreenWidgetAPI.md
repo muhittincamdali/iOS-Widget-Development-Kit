@@ -1,5 +1,36 @@
 # Home Screen Widget API
 
+<!-- TOC START -->
+## Table of Contents
+- [Home Screen Widget API](#home-screen-widget-api)
+- [Overview](#overview)
+- [Core Features](#core-features)
+  - [Widget Types](#widget-types)
+  - [Interactive Features](#interactive-features)
+  - [Data Integration](#data-integration)
+- [API Reference](#api-reference)
+  - [HomeScreenWidget](#homescreenwidget)
+  - [HomeWidgetConfiguration](#homewidgetconfiguration)
+  - [HomeWidgetContentProvider](#homewidgetcontentprovider)
+  - [HomeWidgetInteractionHandler](#homewidgetinteractionhandler)
+- [Usage Examples](#usage-examples)
+  - [Basic Home Screen Widget](#basic-home-screen-widget)
+  - [Interactive Home Screen Widget](#interactive-home-screen-widget)
+  - [Data-Driven Home Screen Widget](#data-driven-home-screen-widget)
+- [Widget Sizes](#widget-sizes)
+  - [Small Widget (155x155)](#small-widget-155x155)
+  - [Medium Widget (329x155)](#medium-widget-329x155)
+  - [Large Widget (329x345)](#large-widget-329x345)
+  - [Extra Large Widget (329x345)](#extra-large-widget-329x345)
+- [Best Practices](#best-practices)
+  - [Performance](#performance)
+  - [User Experience](#user-experience)
+  - [Data Management](#data-management)
+  - [Interactions](#interactions)
+- [Related Documentation](#related-documentation)
+<!-- TOC END -->
+
+
 ## Overview
 
 The `HomeScreenWidget` API provides comprehensive functionality for creating and managing home screen widgets in iOS applications. This API enables developers to build beautiful, interactive, and data-driven widgets that enhance the user experience on the iOS home screen.

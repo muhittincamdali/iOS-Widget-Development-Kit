@@ -1,5 +1,33 @@
 # Widget Development Manager API
 
+<!-- TOC START -->
+## Table of Contents
+- [Widget Development Manager API](#widget-development-manager-api)
+- [Overview](#overview)
+- [Core Features](#core-features)
+  - [Widget Management](#widget-management)
+  - [Multi-Widget Support](#multi-widget-support)
+  - [Advanced Features](#advanced-features)
+- [API Reference](#api-reference)
+  - [WidgetDevelopmentManager](#widgetdevelopmentmanager)
+  - [WidgetConfiguration](#widgetconfiguration)
+  - [Widget](#widget)
+  - [WidgetContent](#widgetcontent)
+  - [WidgetLifecycle](#widgetlifecycle)
+- [Usage Examples](#usage-examples)
+  - [Basic Widget Manager Setup](#basic-widget-manager-setup)
+  - [Widget Registration](#widget-registration)
+  - [Widget Data Updates](#widget-data-updates)
+  - [Widget Analytics](#widget-analytics)
+- [Error Handling](#error-handling)
+- [Best Practices](#best-practices)
+  - [Performance Optimization](#performance-optimization)
+  - [User Experience](#user-experience)
+  - [Data Management](#data-management)
+- [Related Documentation](#related-documentation)
+<!-- TOC END -->
+
+
 ## Overview
 
 The `WidgetDevelopmentManager` is the core component of the iOS Widget Development Kit that provides comprehensive widget management capabilities. This API enables developers to create, configure, and manage various types of widgets with advanced features and customization options.

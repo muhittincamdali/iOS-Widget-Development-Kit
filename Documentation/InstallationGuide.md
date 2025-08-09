@@ -1,5 +1,22 @@
 # Installation Guide
 
+<!-- TOC START -->
+## Table of Contents
+- [Installation Guide](#installation-guide)
+- [Prerequisites](#prerequisites)
+- [Installation Methods](#installation-methods)
+  - [Swift Package Manager (Recommended)](#swift-package-manager-recommended)
+  - [Manual Installation](#manual-installation)
+- [Configuration](#configuration)
+  - [Basic Setup](#basic-setup)
+  - [Advanced Configuration](#advanced-configuration)
+- [Dependencies](#dependencies)
+- [Troubleshooting](#troubleshooting)
+  - [Common Issues](#common-issues)
+  - [Support](#support)
+<!-- TOC END -->
+
+
 ## Prerequisites
 
 - iOS 16.0+

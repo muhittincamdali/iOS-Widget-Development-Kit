@@ -1,5 +1,41 @@
 # Lock Screen Widget API
 
+<!-- TOC START -->
+## Table of Contents
+- [Lock Screen Widget API](#lock-screen-widget-api)
+- [Overview](#overview)
+- [Core Classes](#core-classes)
+  - [LockScreenWidgetManager](#lockscreenwidgetmanager)
+  - [LockScreenWidget](#lockscreenwidget)
+  - [LockWidgetConfiguration](#lockwidgetconfiguration)
+- [Widget Sizes](#widget-sizes)
+  - [Supported Sizes](#supported-sizes)
+- [Content Types](#content-types)
+  - [Basic Content](#basic-content)
+  - [Interactive Content](#interactive-content)
+- [Usage Examples](#usage-examples)
+  - [Creating a Simple Lock Screen Widget](#creating-a-simple-lock-screen-widget)
+  - [Creating an Interactive Lock Screen Widget](#creating-an-interactive-lock-screen-widget)
+- [Data Integration](#data-integration)
+  - [Updating Widget with Data](#updating-widget-with-data)
+- [Error Handling](#error-handling)
+  - [WidgetError Types](#widgeterror-types)
+  - [Error Handling Example](#error-handling-example)
+- [Best Practices](#best-practices)
+  - [Performance Optimization](#performance-optimization)
+  - [Design Guidelines](#design-guidelines)
+  - [Security Considerations](#security-considerations)
+- [API Reference](#api-reference)
+  - [Methods](#methods)
+  - [Properties](#properties)
+- [Migration Guide](#migration-guide)
+  - [From iOS 14 to iOS 15+](#from-ios-14-to-ios-15)
+- [Troubleshooting](#troubleshooting)
+  - [Common Issues](#common-issues)
+  - [Debug Tips](#debug-tips)
+<!-- TOC END -->
+
+
 ## Overview
 
 The Lock Screen Widget API provides comprehensive functionality for creating and managing lock screen widgets in iOS applications. This API enables developers to create engaging, informative, and interactive widgets that appear on the device's lock screen.
