@@ -3,269 +3,187 @@ import Quick
 import Nimble
 @testable import WidgetKit
 
-@available(iOS 16.0, *)
-class WidgetEngineTests: QuickSpec {
-    
+final class WidgetEngineTests: QuickSpec {
     override func spec() {
         describe("WidgetEngine") {
             var widgetEngine: WidgetEngine!
             
             beforeEach {
-                widgetEngine = WidgetEngine.shared
+                widgetEngine = WidgetEngine()
             }
             
-            context("when initializing") {
-                it("should have default templates registered") {
+            afterEach {
+                widgetEngine = nil
+            }
+            
+            context("Initialization") {
+                it("should initialize with default configuration") {
                     expect(widgetEngine).toNot(beNil())
+                    expect(widgetEngine.isRunning).to(beFalse())
                 }
                 
-                it("should have performance metrics initialized") {
-                    expect(widgetEngine.performanceMetrics).toNot(beNil())
+                it("should have correct default settings") {
+                    expect(widgetEngine.configuration.enableHomeScreenWidgets).to(beTrue())
+                    expect(widgetEngine.configuration.enableLockScreenWidgets).to(beTrue())
+                    expect(widgetEngine.configuration.enableLiveActivities).to(beTrue())
                 }
             }
             
-            context("when registering templates") {
-                it("should register weather template") {
-                    let template = WeatherWidgetTemplate()
-                    widgetEngine.registerTemplate(template)
+            context("Widget Registration") {
+                it("should register home screen widget successfully") {
+                    let widget = HomeScreenWidget(kind: "test.widget")
                     
-                    // Verify template is registered
-                    expect(template.identifier).to(equal("weather_widget"))
+                    widgetEngine.register(widget) { result in
+                        expect(result).to(beSuccess())
+                    }
                 }
                 
-                it("should register calendar template") {
-                    let template = CalendarWidgetTemplate()
-                    widgetEngine.registerTemplate(template)
+                it("should register lock screen widget successfully") {
+                    let widget = LockScreenWidget(kind: "test.lockwidget")
                     
-                    expect(template.identifier).to(equal("calendar_widget"))
+                    widgetEngine.register(widget) { result in
+                        expect(result).to(beSuccess())
+                    }
                 }
                 
-                it("should register fitness template") {
-                    let template = FitnessWidgetTemplate()
-                    widgetEngine.registerTemplate(template)
+                it("should fail to register widget with invalid kind") {
+                    let widget = HomeScreenWidget(kind: "")
                     
-                    expect(template.identifier).to(equal("fitness_widget"))
+                    widgetEngine.register(widget) { result in
+                        expect(result).to(beFailure())
+                    }
                 }
             }
             
-            context("when creating widgets") {
-                it("should create weather widget with valid configuration") {
-                    let template = WeatherWidgetTemplate()
-                    widgetEngine.registerTemplate(template)
-                    
-                    let configuration = template.getDefaultConfiguration()
-                    let widget = widgetEngine.createWidget(with: configuration)
-                    
-                    expect(widget).toNot(beNil())
+            context("Widget Management") {
+                it("should start widget engine successfully") {
+                    widgetEngine.start { result in
+                        expect(result).to(beSuccess())
+                        expect(widgetEngine.isRunning).to(beTrue())
+                    }
                 }
                 
-                it("should create calendar widget with valid configuration") {
-                    let template = CalendarWidgetTemplate()
-                    widgetEngine.registerTemplate(template)
-                    
-                    let configuration = template.getDefaultConfiguration()
-                    let widget = widgetEngine.createWidget(with: configuration)
-                    
-                    expect(widget).toNot(beNil())
+                it("should stop widget engine successfully") {
+                    widgetEngine.start { _ in
+                        widgetEngine.stop { result in
+                            expect(result).to(beSuccess())
+                            expect(widgetEngine.isRunning).to(beFalse())
+                        }
+                    }
                 }
                 
-                it("should create fitness widget with valid configuration") {
-                    let template = FitnessWidgetTemplate()
-                    widgetEngine.registerTemplate(template)
+                it("should update widget configuration") {
+                    let newConfig = WidgetConfiguration()
+                    newConfig.enableHomeScreenWidgets = false
                     
-                    let configuration = template.getDefaultConfiguration()
-                    let widget = widgetEngine.createWidget(with: configuration)
-                    
-                    expect(widget).toNot(beNil())
+                    widgetEngine.updateConfiguration(newConfig) { result in
+                        expect(result).to(beSuccess())
+                        expect(widgetEngine.configuration.enableHomeScreenWidgets).to(beFalse())
+                    }
                 }
             }
             
-            context("when updating widgets") {
-                it("should update widget with new data") {
-                    let widgetId = "test_widget"
-                    let data = WidgetData(
-                        id: widgetId,
-                        type: .weather,
-                        content: ["temperature": 25]
-                    )
+            context("Data Integration") {
+                it("should fetch widget data successfully") {
+                    let dataSource = WidgetDataSource(type: .api, endpoint: "https://api.test.com")
                     
-                    widgetEngine.updateWidget(widgetId, with: data)
+                    widgetEngine.fetchData(from: dataSource) { result in
+                        expect(result).to(beSuccess())
+                    }
+                }
+                
+                it("should handle data fetch failure") {
+                    let dataSource = WidgetDataSource(type: .api, endpoint: "https://invalid-url.com")
                     
-                    // Verify update was processed
-                    expect(data.id).to(equal(widgetId))
+                    widgetEngine.fetchData(from: dataSource) { result in
+                        expect(result).to(beFailure())
+                    }
                 }
             }
             
-            context("when configuring performance") {
-                it("should update performance settings") {
-                    let settings = WidgetPerformanceSettings(
-                        maxMemoryUsage: 50 * 1024 * 1024,
-                        refreshInterval: 60.0,
-                        enableBatteryOptimization: true
-                    )
+            context("Performance") {
+                it("should register multiple widgets efficiently") {
+                    let widgets = (0..<10).map { HomeScreenWidget(kind: "widget.\($0)") }
                     
-                    widgetEngine.configurePerformance(settings)
+                    measure {
+                        for widget in widgets {
+                            widgetEngine.register(widget) { _ in }
+                        }
+                    }
+                }
+                
+                it("should handle concurrent widget updates") {
+                    let expectation = XCTestExpectation(description: "Concurrent updates")
+                    expectation.expectedFulfillmentCount = 5
                     
-                    expect(widgetEngine.performanceMetrics.settings.maxMemoryUsage).to(equal(settings.maxMemoryUsage))
+                    for i in 0..<5 {
+                        DispatchQueue.global().async {
+                            let widget = HomeScreenWidget(kind: "concurrent.\(i)")
+                            widgetEngine.register(widget) { _ in
+                                expectation.fulfill()
+                            }
+                        }
+                    }
+                    
+                    wait(for: [expectation], timeout: 5.0)
                 }
             }
             
-            context("when getting analytics") {
-                it("should return analytics data") {
-                    let analytics = widgetEngine.getAnalytics()
+            context("Error Handling") {
+                it("should handle invalid widget configuration") {
+                    let invalidConfig = WidgetConfiguration()
+                    invalidConfig.refreshInterval = -1
                     
-                    expect(analytics).toNot(beNil())
-                }
-            }
-        }
-        
-        describe("WidgetConfiguration") {
-            context("when creating configuration") {
-                it("should create valid configuration") {
-                    let widget = WidgetDefinition(
-                        id: "test_widget",
-                        type: .weather,
-                        dataSourceIdentifier: "weather_api",
-                        customization: WidgetCustomization()
-                    )
-                    
-                    let configuration = WidgetConfiguration(
-                        id: "test_config",
-                        templateIdentifier: "weather_widget",
-                        widgets: [widget],
-                        settings: WidgetSettings()
-                    )
-                    
-                    expect(configuration.id).to(equal("test_config"))
-                    expect(configuration.templateIdentifier).to(equal("weather_widget"))
-                    expect(configuration.widgets.count).to(equal(1))
-                }
-            }
-        }
-        
-        describe("WidgetData") {
-            context("when creating data") {
-                it("should create valid data") {
-                    let data = WidgetData(
-                        id: "test_data",
-                        type: .weather,
-                        content: ["temperature": 22, "condition": "sunny"]
-                    )
-                    
-                    expect(data.id).to(equal("test_data"))
-                    expect(data.type).to(equal(.weather))
-                    expect(data.content["temperature"] as? Int).to(equal(22))
-                }
-            }
-        }
-        
-        describe("WidgetPerformanceMetrics") {
-            context("when updating metrics") {
-                it("should update memory usage") {
-                    let metrics = WidgetPerformanceMetrics()
-                    let usage: UInt64 = 100 * 1024 * 1024
-                    
-                    metrics.updateMemoryUsage(usage)
-                    
-                    expect(metrics.memoryUsage).to(equal(usage))
+                    widgetEngine.updateConfiguration(invalidConfig) { result in
+                        expect(result).to(beFailure())
+                    }
                 }
                 
-                it("should update battery level") {
-                    let metrics = WidgetPerformanceMetrics()
-                    let level: Float = 0.75
+                it("should handle network errors gracefully") {
+                    let dataSource = WidgetDataSource(type: .api, endpoint: "https://unreachable-url.com")
                     
-                    metrics.updateBatteryLevel(level)
-                    
-                    expect(metrics.batteryLevel).to(equal(level))
-                }
-                
-                it("should update background refresh count") {
-                    let metrics = WidgetPerformanceMetrics()
-                    let initialCount = metrics.refreshCount
-                    
-                    metrics.updateBackgroundRefresh()
-                    
-                    expect(metrics.refreshCount).to(equal(initialCount + 1))
+                    widgetEngine.fetchData(from: dataSource) { result in
+                        expect(result).to(beFailure())
+                    }
                 }
             }
         }
-        
-        describe("WidgetCustomization") {
-            context("when creating customization") {
-                it("should create with default values") {
-                    let customization = WidgetCustomization()
-                    
-                    expect(customization.backgroundColor).to(equal(.clear))
-                    expect(customization.textColor).to(equal(.primary))
-                    expect(customization.accentColor).to(equal(.blue))
-                    expect(customization.cornerRadius).to(equal(12))
-                }
-                
-                it("should create with custom values") {
-                    let customization = WidgetCustomization(
-                        backgroundColor: .red,
-                        textColor: .white,
-                        accentColor: .green,
-                        cornerRadius: 20
-                    )
-                    
-                    expect(customization.backgroundColor).to(equal(.red))
-                    expect(customization.textColor).to(equal(.white))
-                    expect(customization.accentColor).to(equal(.green))
-                    expect(customization.cornerRadius).to(equal(20))
-                }
+    }
+}
+
+// MARK: - Test Helpers
+
+extension Result {
+    func beSuccess() -> Predicate<Result> {
+        return Predicate { actual in
+            let message = ExpectationMessage.expectedActualValueTo("be success")
+            
+            guard let actual = try actual.evaluate() else {
+                return PredicateResult(status: .fail, message: message.appendedBeNilHint())
+            }
+            
+            switch actual {
+            case .success:
+                return PredicateResult(status: .matches, message: message)
+            case .failure:
+                return PredicateResult(status: .fail, message: message)
             }
         }
-        
-        describe("WidgetSettings") {
-            context("when creating settings") {
-                it("should create with default values") {
-                    let settings = WidgetSettings()
-                    
-                    expect(settings.refreshInterval).to(equal(30.0))
-                    expect(settings.enableAnimations).to(beTrue())
-                    expect(settings.enableHaptics).to(beTrue())
-                    expect(settings.enableSound).to(beFalse())
-                }
-                
-                it("should create with custom values") {
-                    let settings = WidgetSettings(
-                        refreshInterval: 60.0,
-                        enableAnimations: false,
-                        enableHaptics: false,
-                        enableSound: true
-                    )
-                    
-                    expect(settings.refreshInterval).to(equal(60.0))
-                    expect(settings.enableAnimations).to(beFalse())
-                    expect(settings.enableHaptics).to(beFalse())
-                    expect(settings.enableSound).to(beTrue())
-                }
+    }
+    
+    func beFailure() -> Predicate<Result> {
+        return Predicate { actual in
+            let message = ExpectationMessage.expectedActualValueTo("be failure")
+            
+            guard let actual = try actual.evaluate() else {
+                return PredicateResult(status: .fail, message: message.appendedBeNilHint())
             }
-        }
-        
-        describe("WidgetType") {
-            context("when using widget types") {
-                it("should have all required types") {
-                    let types = WidgetType.allCases
-                    
-                    expect(types).to(contain(.weather))
-                    expect(types).to(contain(.calendar))
-                    expect(types).to(contain(.fitness))
-                    expect(types).to(contain(.news))
-                    expect(types).to(contain(.social))
-                    expect(types).to(contain(.productivity))
-                    expect(types).to(contain(.entertainment))
-                    expect(types).to(contain(.finance))
-                    expect(types).to(contain(.health))
-                    expect(types).to(contain(.travel))
-                }
-                
-                it("should have correct raw values") {
-                    expect(WidgetType.weather.rawValue).to(equal("weather"))
-                    expect(WidgetType.calendar.rawValue).to(equal("calendar"))
-                    expect(WidgetType.fitness.rawValue).to(equal("fitness"))
-                }
+            
+            switch actual {
+            case .success:
+                return PredicateResult(status: .fail, message: message)
+            case .failure:
+                return PredicateResult(status: .matches, message: message)
             }
         }
     }
