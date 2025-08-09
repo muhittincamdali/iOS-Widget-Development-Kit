@@ -1,5 +1,53 @@
 # Data Integration Guide
 
+<!-- TOC START -->
+## Table of Contents
+- [Data Integration Guide](#data-integration-guide)
+- [Introduction](#introduction)
+- [Prerequisites](#prerequisites)
+- [Getting Started](#getting-started)
+  - [1. Import the Framework](#1-import-the-framework)
+  - [2. Initialize Data Manager](#2-initialize-data-manager)
+- [Data Sources](#data-sources)
+  - [API Data Sources](#api-data-sources)
+  - [Local Data Sources](#local-data-sources)
+  - [Database Data Sources](#database-data-sources)
+- [Data Fetching](#data-fetching)
+  - [Basic Data Fetching](#basic-data-fetching)
+  - [Cached Data Fetching](#cached-data-fetching)
+  - [Background Data Fetching](#background-data-fetching)
+- [Real-Time Updates](#real-time-updates)
+  - [WebSocket Integration](#websocket-integration)
+  - [Push Notifications](#push-notifications)
+- [Data Processing](#data-processing)
+  - [Data Transformation](#data-transformation)
+  - [Data Validation](#data-validation)
+- [Caching](#caching)
+  - [Cache Configuration](#cache-configuration)
+  - [Cache Operations](#cache-operations)
+- [Error Handling](#error-handling)
+  - [Network Errors](#network-errors)
+  - [Data Errors](#data-errors)
+  - [Recovery Strategies](#recovery-strategies)
+- [Performance Optimization](#performance-optimization)
+  - [Efficient Data Fetching](#efficient-data-fetching)
+  - [Memory Management](#memory-management)
+- [Security](#security)
+  - [Data Encryption](#data-encryption)
+  - [Certificate Pinning](#certificate-pinning)
+- [Testing](#testing)
+  - [Unit Testing](#unit-testing)
+  - [Integration Testing](#integration-testing)
+- [Deployment](#deployment)
+  - [Production Configuration](#production-configuration)
+  - [Monitoring](#monitoring)
+- [Troubleshooting](#troubleshooting)
+  - [Common Issues](#common-issues)
+  - [Debug Tools](#debug-tools)
+- [Conclusion](#conclusion)
+<!-- TOC END -->
+
+
 ## Introduction
 
 This guide provides comprehensive instructions for integrating data sources with widgets in iOS applications using the iOS Widget Development Kit. Data integration enables widgets to display real-time, relevant information from various sources including APIs, databases, and local storage.

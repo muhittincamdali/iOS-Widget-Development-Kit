@@ -1,5 +1,58 @@
 # Configuration API
 
+<!-- TOC START -->
+## Table of Contents
+- [Configuration API](#configuration-api)
+- [Overview](#overview)
+- [Core Classes](#core-classes)
+  - [WidgetConfiguration](#widgetconfiguration)
+  - [DataIntegrationConfiguration](#dataintegrationconfiguration)
+  - [PerformanceConfiguration](#performanceconfiguration)
+- [Widget Configuration](#widget-configuration)
+  - [Basic Widget Configuration](#basic-widget-configuration)
+  - [Advanced Widget Configuration](#advanced-widget-configuration)
+- [Data Integration Configuration](#data-integration-configuration)
+  - [Real-Time Updates Configuration](#real-time-updates-configuration)
+  - [Caching Configuration](#caching-configuration)
+  - [Network Configuration](#network-configuration)
+- [Performance Configuration](#performance-configuration)
+  - [Memory Management](#memory-management)
+  - [Rendering Configuration](#rendering-configuration)
+  - [Background Processing](#background-processing)
+- [Security Configuration](#security-configuration)
+  - [Encryption Configuration](#encryption-configuration)
+  - [Authentication Configuration](#authentication-configuration)
+  - [Certificate Pinning](#certificate-pinning)
+- [Analytics Configuration](#analytics-configuration)
+  - [Usage Analytics](#usage-analytics)
+  - [Error Reporting](#error-reporting)
+- [Localization Configuration](#localization-configuration)
+  - [Language Support](#language-support)
+  - [Regional Settings](#regional-settings)
+- [Accessibility Configuration](#accessibility-configuration)
+  - [Accessibility Settings](#accessibility-settings)
+  - [Custom Accessibility](#custom-accessibility)
+- [Configuration Management](#configuration-management)
+  - [Configuration Persistence](#configuration-persistence)
+  - [Configuration Validation](#configuration-validation)
+- [Error Handling](#error-handling)
+  - [Configuration Errors](#configuration-errors)
+  - [Error Handling Example](#error-handling-example)
+- [API Reference](#api-reference)
+  - [Methods](#methods)
+  - [Properties](#properties)
+- [Migration Guide](#migration-guide)
+  - [From iOS 14 to iOS 15+](#from-ios-14-to-ios-15)
+- [Troubleshooting](#troubleshooting)
+  - [Common Issues](#common-issues)
+  - [Debug Tools](#debug-tools)
+- [Best Practices](#best-practices)
+  - [Configuration Management](#configuration-management)
+  - [Performance Optimization](#performance-optimization)
+  - [Security Considerations](#security-considerations)
+<!-- TOC END -->
+
+
 ## Overview
 
 The Configuration API provides comprehensive functionality for configuring widgets, data sources, and system settings in iOS applications using the iOS Widget Development Kit. This API enables developers to customize widget behavior, appearance, and functionality through various configuration options.

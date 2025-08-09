@@ -1,5 +1,29 @@
 # Usage Guide
 
+<!-- TOC START -->
+## Table of Contents
+- [Usage Guide](#usage-guide)
+- [Quick Start](#quick-start)
+  - [Creating Your First Widget](#creating-your-first-widget)
+  - [Customizing Widgets](#customizing-widgets)
+- [Live Data Integration](#live-data-integration)
+  - [Setting Up Data Sources](#setting-up-data-sources)
+  - [Custom Data Sources](#custom-data-sources)
+- [Analytics and Monitoring](#analytics-and-monitoring)
+  - [Performance Tracking](#performance-tracking)
+  - [Error Handling](#error-handling)
+- [Advanced Features](#advanced-features)
+  - [Performance Optimization](#performance-optimization)
+  - [Widget Lifecycle Management](#widget-lifecycle-management)
+- [Best Practices](#best-practices)
+  - [Memory Management](#memory-management)
+  - [Battery Optimization](#battery-optimization)
+  - [Error Handling](#error-handling)
+  - [Performance](#performance)
+- [Examples](#examples)
+<!-- TOC END -->
+
+
 ## Quick Start
 
 ### Creating Your First Widget

@@ -1,5 +1,55 @@
 # Live Activity Guide
 
+<!-- TOC START -->
+## Table of Contents
+- [Live Activity Guide](#live-activity-guide)
+- [Introduction](#introduction)
+- [Prerequisites](#prerequisites)
+- [Getting Started](#getting-started)
+  - [1. Project Setup](#1-project-setup)
+  - [2. Import the Framework](#2-import-the-framework)
+  - [3. Initialize Activity Manager](#3-initialize-activity-manager)
+- [Creating Your First Live Activity](#creating-your-first-live-activity)
+  - [Step 1: Define Activity Configuration](#step-1-define-activity-configuration)
+  - [Step 2: Create Activity Instance](#step-2-create-activity-instance)
+  - [Step 3: Define Activity Content](#step-3-define-activity-content)
+  - [Step 4: Start Activity](#step-4-start-activity)
+- [Activity Types and Use Cases](#activity-types-and-use-cases)
+  - [Delivery Tracking](#delivery-tracking)
+  - [Ride Sharing](#ride-sharing)
+  - [Music Playback](#music-playback)
+- [Dynamic Island Integration](#dynamic-island-integration)
+  - [Compact View](#compact-view)
+  - [Expanded View](#expanded-view)
+  - [Minimal View](#minimal-view)
+- [Data Integration](#data-integration)
+  - [Real-Time Updates](#real-time-updates)
+  - [Background Updates](#background-updates)
+- [Interactive Elements](#interactive-elements)
+  - [Action Buttons](#action-buttons)
+  - [Gesture Recognition](#gesture-recognition)
+- [Styling and Theming](#styling-and-theming)
+  - [Custom Styling](#custom-styling)
+  - [Dynamic Theming](#dynamic-theming)
+- [Performance Optimization](#performance-optimization)
+  - [Best Practices](#best-practices)
+  - [Performance Monitoring](#performance-monitoring)
+- [Error Handling](#error-handling)
+  - [Common Errors and Solutions](#common-errors-and-solutions)
+  - [Error Handling Implementation](#error-handling-implementation)
+- [Testing](#testing)
+  - [Unit Testing](#unit-testing)
+  - [UI Testing](#ui-testing)
+- [Deployment](#deployment)
+  - [App Store Guidelines](#app-store-guidelines)
+  - [Production Checklist](#production-checklist)
+- [Troubleshooting](#troubleshooting)
+  - [Common Issues](#common-issues)
+  - [Debug Tools](#debug-tools)
+- [Conclusion](#conclusion)
+<!-- TOC END -->
+
+
 ## Introduction
 
 This guide provides comprehensive instructions for creating and implementing Live Activities in iOS applications using the iOS Widget Development Kit. Live Activities provide users with real-time, engaging experiences that integrate with the Dynamic Island and Lock Screen.

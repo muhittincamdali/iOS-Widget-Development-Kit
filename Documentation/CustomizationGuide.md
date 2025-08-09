@@ -1,5 +1,58 @@
 # Customization Guide
 
+<!-- TOC START -->
+## Table of Contents
+- [Customization Guide](#customization-guide)
+- [Introduction](#introduction)
+- [Prerequisites](#prerequisites)
+- [Getting Started](#getting-started)
+  - [1. Import the Framework](#1-import-the-framework)
+  - [2. Initialize Customization Manager](#2-initialize-customization-manager)
+- [Visual Customization](#visual-customization)
+  - [Color Schemes](#color-schemes)
+  - [Dynamic Colors](#dynamic-colors)
+  - [Custom Fonts](#custom-fonts)
+- [Layout Customization](#layout-customization)
+  - [Custom Layouts](#custom-layouts)
+  - [Responsive Design](#responsive-design)
+- [Animation and Transitions](#animation-and-transitions)
+  - [Basic Animations](#basic-animations)
+  - [Custom Animations](#custom-animations)
+  - [Transition Effects](#transition-effects)
+- [Theming System](#theming-system)
+  - [Theme Creation](#theme-creation)
+  - [Theme Switching](#theme-switching)
+- [Interactive Elements](#interactive-elements)
+  - [Custom Buttons](#custom-buttons)
+  - [Gesture Recognition](#gesture-recognition)
+- [Content Customization](#content-customization)
+  - [Dynamic Content](#dynamic-content)
+  - [Conditional Styling](#conditional-styling)
+- [Accessibility](#accessibility)
+  - [Accessibility Configuration](#accessibility-configuration)
+  - [Custom Accessibility Labels](#custom-accessibility-labels)
+- [Performance Optimization](#performance-optimization)
+  - [Rendering Optimization](#rendering-optimization)
+  - [Memory Management](#memory-management)
+- [Branding and Identity](#branding-and-identity)
+  - [Brand Colors](#brand-colors)
+  - [Logo Integration](#logo-integration)
+- [Advanced Customization](#advanced-customization)
+  - [Custom Widget Types](#custom-widget-types)
+  - [Plugin System](#plugin-system)
+- [Testing Customizations](#testing-customizations)
+  - [Unit Testing](#unit-testing)
+  - [Visual Testing](#visual-testing)
+- [Deployment](#deployment)
+  - [Production Configuration](#production-configuration)
+  - [Quality Assurance](#quality-assurance)
+- [Troubleshooting](#troubleshooting)
+  - [Common Issues](#common-issues)
+  - [Debug Tools](#debug-tools)
+- [Conclusion](#conclusion)
+<!-- TOC END -->
+
+
 ## Introduction
 
 This guide provides comprehensive instructions for customizing widgets in iOS applications using the iOS Widget Development Kit. Customization enables developers to create unique, branded, and visually appealing widgets that match their app's design language and user preferences.

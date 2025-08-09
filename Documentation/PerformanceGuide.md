@@ -1,5 +1,44 @@
 # Performance Guide
 
+<!-- TOC START -->
+## Table of Contents
+- [Performance Guide](#performance-guide)
+- [Overview](#overview)
+- [Performance Metrics](#performance-metrics)
+  - [Target Performance Goals](#target-performance-goals)
+- [Memory Management](#memory-management)
+  - [Widget Cache Optimization](#widget-cache-optimization)
+  - [Memory Monitoring](#memory-monitoring)
+  - [Memory Cleanup Strategies](#memory-cleanup-strategies)
+- [Battery Optimization](#battery-optimization)
+  - [Refresh Rate Management](#refresh-rate-management)
+  - [Background Processing](#background-processing)
+- [Network Optimization](#network-optimization)
+  - [Request Batching](#request-batching)
+  - [Caching Strategies](#caching-strategies)
+- [Animation Performance](#animation-performance)
+  - [60fps Animations](#60fps-animations)
+  - [Animation Optimization](#animation-optimization)
+- [Data Processing](#data-processing)
+  - [Efficient Data Handling](#efficient-data-handling)
+  - [Background Processing](#background-processing)
+- [Error Handling and Recovery](#error-handling-and-recovery)
+  - [Graceful Degradation](#graceful-degradation)
+  - [Automatic Recovery](#automatic-recovery)
+- [Monitoring and Analytics](#monitoring-and-analytics)
+  - [Performance Monitoring](#performance-monitoring)
+  - [Real-time Monitoring](#real-time-monitoring)
+- [Best Practices](#best-practices)
+  - [Widget Design](#widget-design)
+  - [Code Optimization](#code-optimization)
+  - [Testing Performance](#testing-performance)
+- [Troubleshooting](#troubleshooting)
+  - [Common Performance Issues](#common-performance-issues)
+  - [Performance Debugging](#performance-debugging)
+- [Conclusion](#conclusion)
+<!-- TOC END -->
+
+
 ## Overview
 
 This guide provides comprehensive information about optimizing widget performance in the iOS Widget Development Kit.

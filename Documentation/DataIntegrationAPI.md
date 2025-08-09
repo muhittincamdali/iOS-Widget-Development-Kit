@@ -1,5 +1,53 @@
 # Data Integration API
 
+<!-- TOC START -->
+## Table of Contents
+- [Data Integration API](#data-integration-api)
+- [Overview](#overview)
+- [Core Classes](#core-classes)
+  - [WidgetDataManager](#widgetdatamanager)
+  - [WidgetDataSource](#widgetdatasource)
+  - [WidgetData](#widgetdata)
+- [Data Source Types](#data-source-types)
+  - [API Data Sources](#api-data-sources)
+  - [Local Data Sources](#local-data-sources)
+  - [Database Data Sources](#database-data-sources)
+- [Data Fetching](#data-fetching)
+  - [Basic Data Fetching](#basic-data-fetching)
+  - [Cached Data Fetching](#cached-data-fetching)
+  - [Background Data Fetching](#background-data-fetching)
+- [Real-Time Updates](#real-time-updates)
+  - [WebSocket Integration](#websocket-integration)
+  - [Push Notifications](#push-notifications)
+- [Data Processing](#data-processing)
+  - [Data Transformation](#data-transformation)
+  - [Data Validation](#data-validation)
+- [Caching](#caching)
+  - [Cache Configuration](#cache-configuration)
+  - [Cache Operations](#cache-operations)
+- [Error Handling](#error-handling)
+  - [DataError Types](#dataerror-types)
+  - [Error Handling Example](#error-handling-example)
+- [Performance Optimization](#performance-optimization)
+  - [Efficient Data Fetching](#efficient-data-fetching)
+  - [Memory Management](#memory-management)
+- [Security](#security)
+  - [Data Encryption](#data-encryption)
+  - [Certificate Pinning](#certificate-pinning)
+- [API Reference](#api-reference)
+  - [Methods](#methods)
+  - [Properties](#properties)
+- [Migration Guide](#migration-guide)
+  - [From iOS 14 to iOS 15+](#from-ios-14-to-ios-15)
+- [Troubleshooting](#troubleshooting)
+  - [Common Issues](#common-issues)
+  - [Debug Tools](#debug-tools)
+- [Best Practices](#best-practices)
+  - [Data Management](#data-management)
+  - [Security](#security)
+<!-- TOC END -->
+
+
 ## Overview
 
 The Data Integration API provides comprehensive functionality for integrating data sources with widgets in iOS applications using the iOS Widget Development Kit. This API enables developers to fetch, process, cache, and update data from various sources including APIs, databases, and local storage.

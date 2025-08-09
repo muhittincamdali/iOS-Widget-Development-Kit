@@ -1,5 +1,53 @@
 # Home Screen Widget Guide
 
+<!-- TOC START -->
+## Table of Contents
+- [Home Screen Widget Guide](#home-screen-widget-guide)
+- [Introduction](#introduction)
+- [Prerequisites](#prerequisites)
+- [Getting Started](#getting-started)
+  - [1. Project Setup](#1-project-setup)
+  - [2. Import the Framework](#2-import-the-framework)
+  - [3. Initialize Widget Manager](#3-initialize-widget-manager)
+- [Creating Your First Home Screen Widget](#creating-your-first-home-screen-widget)
+  - [Step 1: Define Widget Configuration](#step-1-define-widget-configuration)
+  - [Step 2: Create Widget Instance](#step-2-create-widget-instance)
+  - [Step 3: Define Widget Content](#step-3-define-widget-content)
+  - [Step 4: Register Widget](#step-4-register-widget)
+- [Widget Sizes and Layouts](#widget-sizes-and-layouts)
+  - [Supported Sizes](#supported-sizes)
+  - [Layout Guidelines](#layout-guidelines)
+- [Data Integration](#data-integration)
+  - [Setting Up Data Sources](#setting-up-data-sources)
+  - [Updating Widget with Data](#updating-widget-with-data)
+- [Interactive Widgets](#interactive-widgets)
+  - [Adding Interactions](#adding-interactions)
+  - [Action Buttons](#action-buttons)
+- [Styling and Theming](#styling-and-theming)
+  - [Custom Styling](#custom-styling)
+  - [Dynamic Theming](#dynamic-theming)
+- [Background Updates](#background-updates)
+  - [Configuring Background Updates](#configuring-background-updates)
+  - [Background Data Fetching](#background-data-fetching)
+- [Performance Optimization](#performance-optimization)
+  - [Best Practices](#best-practices)
+  - [Performance Monitoring](#performance-monitoring)
+- [Error Handling](#error-handling)
+  - [Common Errors and Solutions](#common-errors-and-solutions)
+  - [Error Handling Implementation](#error-handling-implementation)
+- [Testing](#testing)
+  - [Unit Testing](#unit-testing)
+  - [UI Testing](#ui-testing)
+- [Deployment](#deployment)
+  - [App Store Guidelines](#app-store-guidelines)
+  - [Production Checklist](#production-checklist)
+- [Troubleshooting](#troubleshooting)
+  - [Common Issues](#common-issues)
+  - [Debug Tools](#debug-tools)
+- [Conclusion](#conclusion)
+<!-- TOC END -->
+
+
 ## Introduction
 
 This guide provides comprehensive instructions for creating and implementing home screen widgets in iOS applications using the iOS Widget Development Kit. Home screen widgets provide users with quick access to important information and app functionality directly from their home screen.

@@ -1,5 +1,56 @@
 # Getting Started Guide
 
+<!-- TOC START -->
+## Table of Contents
+- [Getting Started Guide](#getting-started-guide)
+- [Introduction](#introduction)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+  - [Step 1: Clone the Repository](#step-1-clone-the-repository)
+- [Clone the repository](#clone-the-repository)
+- [Navigate to project directory](#navigate-to-project-directory)
+- [Install dependencies](#install-dependencies)
+  - [Step 2: Add to Your Project](#step-2-add-to-your-project)
+    - [Swift Package Manager](#swift-package-manager)
+    - [CocoaPods](#cocoapods)
+  - [Step 3: Import the Framework](#step-3-import-the-framework)
+- [Quick Start](#quick-start)
+  - [1. Initialize Widget Manager](#1-initialize-widget-manager)
+  - [2. Create Your First Widget](#2-create-your-first-widget)
+  - [3. Add Widget Content](#3-add-widget-content)
+  - [4. Register the Widget](#4-register-the-widget)
+- [Widget Types](#widget-types)
+  - [Home Screen Widgets](#home-screen-widgets)
+  - [Lock Screen Widgets](#lock-screen-widgets)
+  - [Live Activities](#live-activities)
+- [Data Integration](#data-integration)
+  - [Setting Up Data Sources](#setting-up-data-sources)
+  - [Fetching and Updating Data](#fetching-and-updating-data)
+- [Configuration](#configuration)
+  - [Widget Configuration](#widget-configuration)
+  - [Data Integration Configuration](#data-integration-configuration)
+- [Styling and Theming](#styling-and-theming)
+  - [Basic Styling](#basic-styling)
+  - [Dynamic Theming](#dynamic-theming)
+- [Error Handling](#error-handling)
+  - [Basic Error Handling](#basic-error-handling)
+  - [Error Recovery](#error-recovery)
+- [Testing](#testing)
+  - [Unit Testing](#unit-testing)
+  - [UI Testing](#ui-testing)
+- [Best Practices](#best-practices)
+  - [Performance](#performance)
+  - [Design](#design)
+  - [Security](#security)
+- [Troubleshooting](#troubleshooting)
+  - [Common Issues](#common-issues)
+  - [Debug Tools](#debug-tools)
+- [Next Steps](#next-steps)
+- [Support](#support)
+- [Conclusion](#conclusion)
+<!-- TOC END -->
+
+
 ## Introduction
 
 Welcome to the iOS Widget Development Kit! This guide will help you get started with creating beautiful, interactive widgets for iOS applications. Whether you're new to widget development or an experienced developer, this guide will walk you through the essential concepts and help you create your first widget.
