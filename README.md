@@ -1,4 +1,5 @@
 # 📱 iOS Widget Development Kit
+[![CI](https://github.com/muhittincamdali/iOS-Widget-Development-Kit/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/muhittincamdali/iOS-Widget-Development-Kit/actions/workflows/ci.yml)
 
 <!-- TOC START -->
 ## Table of Contents
