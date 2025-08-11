@@ -102,4 +102,60 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - First stable release
 - Core functionality implementation
-- Basic widget system 
+- Basic widget system # iOS-Widget-Development-Kit - Update 1
+# iOS-Widget-Development-Kit - Update 2
+# iOS-Widget-Development-Kit - Update 3
+# iOS-Widget-Development-Kit - Update 4
+# iOS-Widget-Development-Kit - Update 5
+# iOS-Widget-Development-Kit - Update 6
+# iOS-Widget-Development-Kit - Update 7
+# iOS-Widget-Development-Kit - Update 8
+# iOS-Widget-Development-Kit - Update 9
+# iOS-Widget-Development-Kit - Update 10
+# iOS-Widget-Development-Kit - Update 11
+# iOS-Widget-Development-Kit - Update 12
+# iOS-Widget-Development-Kit - Update 13
+# iOS-Widget-Development-Kit - Update 14
+# iOS-Widget-Development-Kit - Update 15
+# iOS-Widget-Development-Kit - Update 16
+# iOS-Widget-Development-Kit - Update 17
+# iOS-Widget-Development-Kit - Update 18
+# iOS-Widget-Development-Kit - Update 19
+# iOS-Widget-Development-Kit - Update 20
+# iOS-Widget-Development-Kit - Update 21
+# iOS-Widget-Development-Kit - Update 22
+# iOS-Widget-Development-Kit - Update 23
+# iOS-Widget-Development-Kit - Update 24
+# iOS-Widget-Development-Kit - Update 25
+# iOS-Widget-Development-Kit - Update 26
+# iOS-Widget-Development-Kit - Update 27
+# iOS-Widget-Development-Kit - Update 28
+# iOS-Widget-Development-Kit - Update 29
+# iOS-Widget-Development-Kit - Update 30
+# iOS-Widget-Development-Kit - Update 31
+# iOS-Widget-Development-Kit - Update 32
+# iOS-Widget-Development-Kit - Update 33
+# iOS-Widget-Development-Kit - Update 34
+# iOS-Widget-Development-Kit - Update 35
+# iOS-Widget-Development-Kit - Update 36
+# iOS-Widget-Development-Kit - Update 37
+# iOS-Widget-Development-Kit - Update 38
+# iOS-Widget-Development-Kit - Update 39
+# iOS-Widget-Development-Kit - Update 40
+# iOS-Widget-Development-Kit - Update 41
+# iOS-Widget-Development-Kit - Update 42
+# iOS-Widget-Development-Kit - Update 43
+# iOS-Widget-Development-Kit - Update 44
+# iOS-Widget-Development-Kit - Update 45
+# iOS-Widget-Development-Kit - Update 46
+# iOS-Widget-Development-Kit - Update 47
+# iOS-Widget-Development-Kit - Update 48
+# iOS-Widget-Development-Kit - Update 49
+# iOS-Widget-Development-Kit - Update 50
+# iOS-Widget-Development-Kit - Update 51
+# iOS-Widget-Development-Kit - Update 52
+# iOS-Widget-Development-Kit - Update 53
+# iOS-Widget-Development-Kit - Update 54
+# iOS-Widget-Development-Kit - Update 55
+# iOS-Widget-Development-Kit - Update 56
+# iOS-Widget-Development-Kit - Update 57
