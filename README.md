@@ -836,4 +836,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🌟 Stargazers
 
-[![Stargazers repo roster for @muhittincamdali/iOS-Widget-Development-Kit](https://starchart.cc/muhittincamdali/iOS-Widget-Development-Kit.svg)](https://github.com/muhittincamdali/iOS-Widget-Development-Kit/stargazers)
