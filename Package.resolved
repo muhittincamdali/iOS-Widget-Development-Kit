@@ -1,0 +1,149 @@
+{
+  "pins" : [
+    {
+      "identity" : "alamofire",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Alamofire/Alamofire.git",
+      "state" : {
+        "revision" : "513364f870f6bfc468f9d2ff0a95caccc10044c5",
+        "version" : "5.10.2"
+      }
+    },
+    {
+      "identity" : "collectionconcurrencykit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/JohnSundell/CollectionConcurrencyKit.git",
+      "state" : {
+        "revision" : "b4f23e24b5a1bff301efc5e70871083ca029ff95",
+        "version" : "0.2.0"
+      }
+    },
+    {
+      "identity" : "cryptoswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/krzyzanowskim/CryptoSwift.git",
+      "state" : {
+        "revision" : "e45a26384239e028ec87fbcc788f513b67e10d8f",
+        "version" : "1.9.0"
+      }
+    },
+    {
+      "identity" : "cwlcatchexception",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mattgallagher/CwlCatchException.git",
+      "state" : {
+        "revision" : "07b2ba21d361c223e25e3c1e924288742923f08c",
+        "version" : "2.2.1"
+      }
+    },
+    {
+      "identity" : "cwlpreconditiontesting",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mattgallagher/CwlPreconditionTesting.git",
+      "state" : {
+        "revision" : "0139c665ebb45e6a9fbdb68aabfd7c39f3fe0071",
+        "version" : "2.2.2"
+      }
+    },
+    {
+      "identity" : "nimble",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Quick/Nimble.git",
+      "state" : {
+        "revision" : "edaedc1ec86f14ac6e2ca495b94f0ff7150d98d0",
+        "version" : "12.3.0"
+      }
+    },
+    {
+      "identity" : "quick",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Quick/Quick.git",
+      "state" : {
+        "revision" : "1163a1b1b114a657c7432b63dd1f92ce99fe11a6",
+        "version" : "7.6.2"
+      }
+    },
+    {
+      "identity" : "sourcekitten",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jpsim/SourceKitten.git",
+      "state" : {
+        "revision" : "453f75b8a3bb2c3596c0d2dd422c289788233a22",
+        "version" : "0.37.1"
+      }
+    },
+    {
+      "identity" : "swift-algorithms",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-algorithms.git",
+      "state" : {
+        "revision" : "87e50f483c54e6efd60e885f7f5aa946cee68023",
+        "version" : "1.2.1"
+      }
+    },
+    {
+      "identity" : "swift-argument-parser",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-argument-parser.git",
+      "state" : {
+        "revision" : "309a47b2b1d9b5e991f36961c983ecec72275be3",
+        "version" : "1.6.1"
+      }
+    },
+    {
+      "identity" : "swift-numerics",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-numerics.git",
+      "state" : {
+        "revision" : "e0ec0f5f3af6f3e4d5e7a19d2af26b481acb6ba8",
+        "version" : "1.0.3"
+      }
+    },
+    {
+      "identity" : "swift-syntax",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swiftlang/swift-syntax.git",
+      "state" : {
+        "revision" : "1103c45ece4f7fe160b8f75b4ea1ee2e5fac1841",
+        "version" : "601.0.0"
+      }
+    },
+    {
+      "identity" : "swiftlint",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/realm/SwiftLint.git",
+      "state" : {
+        "revision" : "625792423014cc49b0a1e5a1a5c0d6b8b3de10f9",
+        "version" : "0.59.1"
+      }
+    },
+    {
+      "identity" : "swiftytexttable",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/scottrhoyt/SwiftyTextTable.git",
+      "state" : {
+        "revision" : "c6df6cf533d120716bff38f8ff9885e1ce2a4ac3",
+        "version" : "0.9.0"
+      }
+    },
+    {
+      "identity" : "swxmlhash",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/drmohundro/SWXMLHash.git",
+      "state" : {
+        "revision" : "a853604c9e9a83ad9954c7e3d2a565273982471f",
+        "version" : "7.0.2"
+      }
+    },
+    {
+      "identity" : "yams",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jpsim/Yams.git",
+      "state" : {
+        "revision" : "3d6871d5b4a5cd519adf233fbb576e0a2af71c17",
+        "version" : "5.4.0"
+      }
+    }
+  ],
+  "version" : 2
+}
