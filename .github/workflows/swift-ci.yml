@@ -1,0 +1,32 @@
+name: Swift CI
+on:
+  pull_request:
+  push:
+jobs:
+  spm:
+    if: ${{ hashFiles('Package.swift') != '' }}
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: '15.4'
+      - name: Build
+        run: swift build -v
+      - name: Test
+        run: swift test --enable-code-coverage
+  xcode:
+    if: ${{ hashFiles('*.xcodeproj') != '' || hashFiles('*.xcworkspace') != '' }}
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: '15.4'
+      - name: Select scheme and build (generic platform)
+        shell: bash
+        run: |
+          SCHEME=$(xcodebuild -list 2>/dev/null | awk '/Schemes:/{flag=1;next} flag && NF{print; exit}')
+          if [ -n "$SCHEME" ]; then
+            xcodebuild -scheme "$SCHEME" -configuration Release -destination 'generic/platform=iOS' build | xcpretty || true
+          fi

@@ -1,0 +1,14 @@
+disabled_rules:
+  - trailing_whitespace
+  - line_length
+  - identifier_name
+  - cyclomatic_complexity
+  - function_body_length
+opt_in_rules:
+  - empty_count
+  - explicit_init
+  - fatal_error_message
+included:
+  - Sources
+  - Tests
+reporter: "github-actions-logging"
