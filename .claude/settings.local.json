@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Bash(for:*)",
+      "Bash(do if [ -f \"$file\" ])",
+      "Bash(then echo \"✅ EXISTS: $file\")",
+      "Bash(else echo \"❌ MISSING: $file\")",
+      "Bash(fi)",
+      "Bash(done)",
+      "Bash(if [ -f \"CONTRIBUTING.md\" ])",
+      "Bash(then echo \"✅ EXISTS: CONTRIBUTING.md\")",
+      "Bash(else echo \"❌ MISSING: CONTRIBUTING.md\")",
+      "Bash(cd:*)",
+      "Bash(cd:*)",
+      "Bash(cd:*)",
+      "Bash(mkdir:*)",
+      "mcp__sequential-thinking__sequentialthinking",
+      "Bash(touch:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git checkout:*)"
+    ],
+    "deny": [],
+    "ask": [],
+    "defaultMode": "acceptEdits",
+    "additionalDirectories": [
+      "/Users/muhittincamdali/Desktop"
+    ]
+  }
+}
