@@ -9,7 +9,7 @@ jobs:
   lychee:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: lycheeverse/lychee-action@v1
         with:
           args: --verbose --no-progress --require-https --max-redirects 5 --retry-wait-time 2 --timeout 20s --exclude-private true **/*.md

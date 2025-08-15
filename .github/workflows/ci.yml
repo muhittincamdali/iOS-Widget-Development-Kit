@@ -19,7 +19,7 @@ jobs:
     name: SwiftLint
     runs-on: macos-13
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       
       - name: Install SwiftLint
         run: brew install swiftlint
@@ -38,7 +38,7 @@ jobs:
           - 'platform=iOS Simulator,OS=16.0,name=iPhone 14'
           - 'platform=iOS Simulator,OS=16.0,name=iPad Pro (12.9-inch) (6th generation)'
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       
       - name: Select Xcode
         run: sudo xcode-select -s /Applications/Xcode_${{ env.XCODE_VERSION }}.app
@@ -65,7 +65,7 @@ jobs:
     runs-on: macos-13
     needs: test
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       
       - name: Select Xcode
         run: sudo xcode-select -s /Applications/Xcode_${{ env.XCODE_VERSION }}.app
@@ -103,7 +103,7 @@ jobs:
     name: Security Scan
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       
       - name: Run Trivy Security Scanner
         uses: aquasecurity/trivy-action@master
@@ -127,7 +127,7 @@ jobs:
       matrix:
         configuration: [Debug, Release]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       
       - name: Select Xcode
         run: sudo xcode-select -s /Applications/Xcode_${{ env.XCODE_VERSION }}.app
@@ -162,7 +162,7 @@ jobs:
     runs-on: macos-13
     needs: build
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       
       - name: Select Xcode
         run: sudo xcode-select -s /Applications/Xcode_${{ env.XCODE_VERSION }}.app
@@ -193,7 +193,7 @@ jobs:
     name: SwiftPM Validation
     runs-on: macos-13
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       
       - name: Select Xcode
         run: sudo xcode-select -s /Applications/Xcode_${{ env.XCODE_VERSION }}.app
@@ -213,7 +213,7 @@ jobs:
     runs-on: macos-13
     needs: build
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       
       - name: Select Xcode
         run: sudo xcode-select -s /Applications/Xcode_${{ env.XCODE_VERSION }}.app
@@ -238,7 +238,7 @@ jobs:
     needs: [build, documentation, security]
     if: github.event_name == 'release'
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       
       - name: Download XCFramework
         uses: actions/download-artifact@v3
@@ -267,7 +267,7 @@ jobs:
     needs: documentation
     if: github.ref == 'refs/heads/main'
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       
       - name: Download Documentation
         uses: actions/download-artifact@v3
