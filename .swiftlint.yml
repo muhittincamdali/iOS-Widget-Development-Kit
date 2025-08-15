@@ -4,11 +4,47 @@ disabled_rules:
   - identifier_name
   - cyclomatic_complexity
   - function_body_length
-opt_in_rules:
+  - file_length
+  - type_body_length
+  - nesting
+  - large_tuple
+  - function_parameter_count
+  - redundant_string_enum_value
+  - trailing_newline
+  - for_where
   - empty_count
+
+opt_in_rules:
   - explicit_init
   - fatal_error_message
+
 included:
   - Sources
   - Tests
+
+excluded:
+  - .build
+  - Demo
+
+file_length:
+  warning: 2000
+  error: 3000
+
+type_body_length:
+  warning: 1000
+  error: 1500
+
+function_body_length:
+  warning: 200
+  error: 300
+
+cyclomatic_complexity:
+  warning: 15
+  error: 25
+
+nesting:
+  type_level:
+    warning: 3
+    error: 5
+
 reporter: "github-actions-logging"

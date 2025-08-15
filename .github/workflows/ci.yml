@@ -53,7 +53,7 @@ jobs:
             | xcpretty --test --color
       
       - name: Upload Test Results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: failure()
         with:
           name: test-results
@@ -151,7 +151,7 @@ jobs:
       
       - name: Upload XCFramework
         if: matrix.configuration == 'Release'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: WidgetDevelopmentKit.xcframework
           path: build/WidgetDevelopmentKit.xcframework
@@ -183,7 +183,7 @@ jobs:
             --hosting-base-path iOS-Widget-Development-Kit
       
       - name: Upload Documentation
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: documentation
           path: docs
@@ -226,7 +226,7 @@ jobs:
             -only-testing:WidgetDevelopmentKitBenchmarks
       
       - name: Upload Benchmark Results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: benchmark-results
           path: BenchmarkResults
