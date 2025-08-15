@@ -2,11 +2,9 @@
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/muhittincamdali/iOS-Widget-Development-Kit/main/.github/assets/logo.png" alt="iOS Widget Development Kit" width="200" height="200">
+# 📱 iOS Widget Development Kit
 
-# iOS Widget Development Kit
-
-**Enterprise-Grade Widget Framework for iOS Applications**
+**🏆 Enterprise-Grade Widget Framework for iOS Applications**
 
 [![CI/CD](https://github.com/muhittincamdali/iOS-Widget-Development-Kit/actions/workflows/ci.yml/badge.svg)](https://github.com/muhittincamdali/iOS-Widget-Development-Kit/actions/workflows/ci.yml)
 [![Swift](https://img.shields.io/badge/Swift-5.9+-FA7343?style=flat&logo=swift&logoColor=white)](https://swift.org)
