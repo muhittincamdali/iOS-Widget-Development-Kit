@@ -92,7 +92,7 @@ jobs:
             $(find . -name "*.app") > coverage.lcov
       
       - name: Upload Coverage to Codecov
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v5
         with:
           file: ./coverage.lcov
           flags: unittests
