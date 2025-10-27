@@ -241,7 +241,7 @@ jobs:
       - uses: actions/checkout@v4
       
       - name: Download XCFramework
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v6
         with:
           name: WidgetDevelopmentKit.xcframework
           path: build
@@ -270,7 +270,7 @@ jobs:
       - uses: actions/checkout@v4
       
       - name: Download Documentation
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v6
         with:
           name: documentation
           path: docs
