@@ -38,6 +38,21 @@
 
 ---
 
+## 📋 Table of Contents
+
+- [Features](#-features)
+- [Quick Start](#-quick-start)
+- [Installation](#installation)
+- [Widget Types](#widget-types)
+- [Live Activities](#-live-activities)
+- [Interactive Widgets](#-interactive-widgets-ios-17)
+- [Documentation](#documentation)
+- [Contributing](#contributing)
+- [License](#license)
+- [Star History](#-star-history)
+
+---
+
 ## ✨ Features
 
 - 🏠 **Home Screen Widgets** — Small, medium, and large sizes with beautiful templates
