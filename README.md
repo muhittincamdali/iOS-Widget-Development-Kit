@@ -84,6 +84,13 @@
 
 ## ✨ Features
 
+### 🖼️ The Ultimate Widget Gallery (The 2026 Standard)
+Why build from scratch? Drop in our high-conversion, pre-built widget templates directly into your app. Includes:
+- **Crypto Widgets:** Real-time sparklines and percentage trends.
+- **Fitness & Health:** Activity rings, step counters, and heart rate graphs.
+- **E-Commerce:** Flash sale timers and order tracking.
+- **Productivity:** Interactive habit trackers and to-do lists.
+
 ### Widget Types
 - 🏠 **Home Screen Widgets** — Small, Medium, Large, Extra Large
 - 🔒 **Lock Screen Widgets** — Circular, Rectangular, Inline
