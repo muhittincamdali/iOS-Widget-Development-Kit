@@ -5,6 +5,7 @@ import WidgetKit
 /// 
 /// These templates are designed to dominate the iOS 17/18 Widget space with
 /// Interactive Widgets and StandBy mode support.
+@available(iOS 17.0, macOS 14.0, watchOS 10.0, tvOS 17.0, *)
 public enum WidgetGallery {
     
     /// A high-conversion Crypto Tracker Widget.
@@ -43,7 +44,11 @@ public enum WidgetGallery {
             }
             .padding()
             .containerBackground(for: .widget) {
+                #if canImport(UIKit)
                 Color(uiColor: .systemBackground)
+                #else
+                Color.white
+                #endif
             }
         }
     }
@@ -78,21 +83,12 @@ public enum WidgetGallery {
             }
             .padding()
             .containerBackground(for: .widget) {
+                #if canImport(UIKit)
                 Color(uiColor: .secondarySystemBackground)
+                #else
+                Color.gray.opacity(0.1)
+                #endif
             }
         }
     }
 }
-
-// Fallback for Color(uiColor:) on macOS
-#if canImport(UIKit)
-import UIKit
-#else
-public extension Color {
-    init(uiColor: Any) { self = .clear }
-}
-public enum UIColor {
-    public static let systemBackground = NSObject()
-    public static let secondarySystemBackground = NSObject()
-}
-#endif
