@@ -1,97 +1,156 @@
-# WidgetDevelopmentKit
+<!-- brand:start -->
 
-[![CI](https://github.com/muhittincamdali/iOS-Widget-Development-Kit/actions/workflows/ci.yml/badge.svg)](https://github.com/muhittincamdali/iOS-Widget-Development-Kit/actions/workflows/ci.yml)
-[![License: MIT](https://img.shields.io/github/license/muhittincamdali/iOS-Widget-Development-Kit)](LICENSE)
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/muhittincamdali/iOS-Widget-Development-Kit/main/.github/brand/banner-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/muhittincamdali/iOS-Widget-Development-Kit/main/.github/brand/banner-light.svg"><img src="https://raw.githubusercontent.com/muhittincamdali/iOS-Widget-Development-Kit/main/.github/brand/banner-light.svg" alt="iOS Widget Development Kit: SwiftUI views and timeline helpers for WidgetKit widgets and Live Activities."></picture></p>
 
-A Swift package of SwiftUI views and helpers for WidgetKit: Home Screen, Lock Screen and
-StandBy widget views, Swift Charts views sized for widgets, timeline and data helpers,
-App Intents for interactive widgets, and ActivityKit templates for Live Activities.
+<!-- lang-selector:start -->
+<p align="center"><a href="README.md">English</a> · <a href="README.tr.md">Türkçe</a> · <a href="README.zh-CN.md">简体中文</a> · <a href="README.ja.md">日本語</a> · <a href="README.ko.md">한국어</a> · <a href="README.es.md">Español</a> · <a href="README.de.md">Deutsch</a> · <a href="README.fr.md">Français</a> · <a href="README.pt-BR.md">Português (Brasil)</a> · <a href="README.ru.md">Русский</a></p>
+<!-- lang-selector:end -->
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/images/home-screen-dark.png">
-  <img src="docs/images/home-screen-light.png" alt="Weather, water, fitness, countdown, quote and habit widgets rendered from the package" width="404">
-</picture>
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/images/charts-dark.png">
-  <img src="docs/images/charts-light.png" alt="Stats sparkline, progress ring, line chart and bar chart views" width="404">
-</picture>
+<p align="center">
+<a href="https://github.com/muhittincamdali/iOS-Widget-Development-Kit/actions/workflows/ci.yml"><img src="https://github.com/muhittincamdali/iOS-Widget-Development-Kit/actions/workflows/ci.yml/badge.svg" alt="CI status"></a>
+<a href="https://github.com/muhittincamdali/iOS-Widget-Development-Kit/blob/main/Package.swift"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/muhittincamdali/iOS-Widget-Development-Kit/main/.github/brand/badge-platforms-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/muhittincamdali/iOS-Widget-Development-Kit/main/.github/brand/badge-platforms-light.svg"><img src="https://raw.githubusercontent.com/muhittincamdali/iOS-Widget-Development-Kit/main/.github/brand/badge-platforms-light.svg" alt="Supported platforms: iOS 17+ · macOS 14+"></picture></a>
+<a href="https://github.com/muhittincamdali/iOS-Widget-Development-Kit/blob/main/Package.swift"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/muhittincamdali/iOS-Widget-Development-Kit/main/.github/brand/badge-language-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/muhittincamdali/iOS-Widget-Development-Kit/main/.github/brand/badge-language-light.svg"><img src="https://raw.githubusercontent.com/muhittincamdali/iOS-Widget-Development-Kit/main/.github/brand/badge-language-light.svg" alt="Language version: Swift 6.0+"></picture></a>
+<a href="https://github.com/muhittincamdali/iOS-Widget-Development-Kit/blob/main/LICENSE"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/muhittincamdali/iOS-Widget-Development-Kit/main/.github/brand/badge-license-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/muhittincamdali/iOS-Widget-Development-Kit/main/.github/brand/badge-license-light.svg"><img src="https://raw.githubusercontent.com/muhittincamdali/iOS-Widget-Development-Kit/main/.github/brand/badge-license-light.svg" alt="License: MIT"></picture></a>
+</p>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/images/lock-screen-dark.png">
-  <img src="docs/images/lock-screen-light.png" alt="Lock Screen battery, activity rings, countdown, weather and stats widgets" width="304">
-</picture>
+<p align="center">
+<a href="#quick-start"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/muhittincamdali/iOS-Widget-Development-Kit/main/.github/brand/button-start-en-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/muhittincamdali/iOS-Widget-Development-Kit/main/.github/brand/button-start-en-light.svg"><img src="https://raw.githubusercontent.com/muhittincamdali/iOS-Widget-Development-Kit/main/.github/brand/button-start-en-light.svg" alt="Get started"></picture></a>
+<a href="https://muhittincamdali.github.io/iOS-Widget-Development-Kit/documentation/widgetdevelopmentkit/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/muhittincamdali/iOS-Widget-Development-Kit/main/.github/brand/button-docs-en-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/muhittincamdali/iOS-Widget-Development-Kit/main/.github/brand/button-docs-en-light.svg"><img src="https://raw.githubusercontent.com/muhittincamdali/iOS-Widget-Development-Kit/main/.github/brand/button-docs-en-light.svg" alt="Documentation"></picture></a>
+<a href="https://github.com/muhittincamdali/iOS-Widget-Development-Kit/tree/main/Examples"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/muhittincamdali/iOS-Widget-Development-Kit/main/.github/brand/button-examples-en-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/muhittincamdali/iOS-Widget-Development-Kit/main/.github/brand/button-examples-en-light.svg"><img src="https://raw.githubusercontent.com/muhittincamdali/iOS-Widget-Development-Kit/main/.github/brand/button-examples-en-light.svg" alt="Examples"></picture></a>
+</p>
 
-The images are rendered from the package's views with `ImageRenderer` by
-[`scripts/render-screenshots.sh`](scripts/render-screenshots.sh). They are drawn outside
-WidgetKit, so the widget frame, Lock Screen vibrancy and StandBy night mode are
-approximated rather than produced by the system.
+<!-- brand:end -->
 
-## What is in the package
+WidgetDevelopmentKit is a Swift package for developers who build widgets for their iOS apps.
+It contains ready-made SwiftUI views for Home Screen, Lock Screen and StandBy widgets, chart
+views sized for widgets, helpers for timelines and for the data the app shares with its
+widget, App Intents for widget buttons, and ActivityKit attributes and views for Live
+Activities. You still write the widget extension; the package saves you the views and the
+date, storage and retry logic that every widget needs.
 
-| Area                  | Contents                                                                                                                                                                                                            | Platforms                |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
-| Home Screen templates | 20 views: weather, stats, finance, social stats, gradient card, calendar, countdown, clock, notes, quote, music, photo frame, podcast, news, fitness rings, habit tracker, to-do, water tracker, battery, shortcuts | iOS, macOS               |
-| Charts                | 9 Swift Charts views: line, sparkline, multi-line, stats + sparkline, bar, horizontal bar, pie/donut, progress ring, activity heat map                                                                              | iOS, macOS               |
-| Lock Screen           | 15 accessory views (circular, rectangular, inline; five adapt to the widget family)                                                                                                                                 | iOS                      |
-| StandBy               | 7 views (clock, photo, weather, calendar, fitness, music, countdown) and a StandBy modifier                                                                                                                         | iOS, macOS               |
-| Interactive widgets   | 5 App Intents (toggle, increment, set value, record action, refresh), a shared `WidgetStateStore`, and 8 views that use them                                                                                        | iOS, macOS               |
-| Live Activities       | 10 `ActivityAttributes` types with Lock Screen and compact Dynamic Island views, `LiveActivities` helpers, and `LiveActivityStateMachine`                                                                           | iOS (state machine: all) |
-| Timelines and data    | `WidgetUpdatePolicy`, `TimelineBuilder`, `TimelineSchedule`, `WidgetSnapshotStore` (Codable values with expiry in App Group defaults)                                                                               | iOS, macOS               |
-| Networking            | `WidgetDataLoader` (retries only transient errors, injectable transport), `Endpoint` request builder                                                                                                                | iOS, macOS               |
-| Configuration         | `WidgetDeepLink`, `HexColor`, `RefreshIntervalOption` and `AccentColorOption` App Entities                                                                                                                          | iOS, macOS               |
-| Debugging             | `WidgetTimelineScrubber`, a view for stepping through timeline entries                                                                                                                                              | iOS, macOS               |
+## Highlights
 
-The package has no third-party dependencies.
+- **20 Home Screen templates** — weather, stats, finance, calendar, countdown, clock, notes,
+  quote, music, podcast, news, fitness rings, habit tracker, to-do, water, battery and more.
+- **Lock Screen and StandBy** — 15 accessory views (circular, rectangular, inline) and 7
+  StandBy views.
+- **Timeline helpers** — entry dates, reload policies and a snapshot store with expiry, so
+  the widget reads what the app saved through an App Group.
+- **Interactive widgets** — 5 App Intents and 8 views with buttons that run them.
+- **Live Activities** — 10 `ActivityAttributes` types with Lock Screen and compact Dynamic
+  Island views, and a state machine that rejects out-of-order updates.
+- **Tested logic** — the date, number and retry code is covered by Swift Testing tests,
+  including edge cases such as `NaN`, zero goals and daylight-saving days.
 
-## Requirements
+## Quick start
 
-- A Swift 6 toolchain: the manifest uses `swift-tools-version: 6.0` and the package builds
-  in the Swift 6 language mode. It has been built and tested only with Xcode 27 (Swift 6.4);
-  CI runs on GitHub's `macos-26` image. Older Xcode versions have not been tried.
-- iOS 17 or later. The macOS 14 target exists so that the platform-independent code and
-  the unit tests can run with `swift test`; Lock Screen views and Live Activities are iOS only.
+**1. Add the package**
+
+Your app needs a widget extension. If it has none yet, choose **File › New › Target…** in
+Xcode and pick **Widget Extension**. Then choose **File › Add Package Dependencies…**, paste
+this URL into the search field at the top right and choose **Add Package**:
+
+```text
+https://github.com/muhittincamdali/iOS-Widget-Development-Kit.git
+```
+
+In the next dialog, set **Add to Target** for `WidgetDevelopmentKit` to your widget
+extension and choose **Add Package**.
+
+**2. Import the module**
+
+At the top of a Swift file in the widget extension:
+
+```swift
+import WidgetDevelopmentKit
+```
+
+**3. Use it**
+
+Add this widget to the extension. It counts down to a date with the package's
+`CountdownWidget` view. Then list `LaunchCountdownWidget()` in the extension's
+`WidgetBundle`, the type marked `@main`.
+
+```swift
+struct LaunchEntry: TimelineEntry {
+    let date: Date
+}
+
+struct LaunchProvider: TimelineProvider {
+    func placeholder(in context: Context) -> LaunchEntry {
+        LaunchEntry(date: .now)
+    }
+
+    func getSnapshot(in context: Context, completion: @escaping (LaunchEntry) -> Void) {
+        completion(LaunchEntry(date: .now))
+    }
+
+    func getTimeline(in context: Context, completion: @escaping (Timeline<LaunchEntry>) -> Void) {
+        // One entry per hour for the next six hours, then WidgetKit asks again.
+        let entries = TimelineSchedule.dates(from: .now, every: 60 * 60, count: 6).map(LaunchEntry.init)
+        completion(Timeline(entries: entries, policy: .atEnd))
+    }
+}
+
+struct LaunchCountdownWidget: Widget {
+    let launchDay = DateComponents(calendar: .current, year: 2027, month: 1, day: 1).date ?? .now
+
+    var body: some WidgetConfiguration {
+        StaticConfiguration(kind: "launch", provider: LaunchProvider()) { entry in
+            CountdownWidget(title: "Launch", targetDate: launchDay, referenceDate: entry.date)
+        }
+        .configurationDisplayName("Countdown")
+        .supportedFamilies([.systemSmall])
+    }
+}
+```
+
+Run the app on an iPhone simulator. On the Home Screen, touch and hold an empty area, tap
+**Edit › Add Widget**, find your app and add **Countdown**. The same code is in
+[`Examples/WidgetKitExample`](Examples/WidgetKitExample/Widgets/LaunchCountdownWidget.swift).
 
 ## Installation
 
-Swift Package Manager, in Xcode: **File > Add Package Dependencies**, enter
-`https://github.com/muhittincamdali/iOS-Widget-Development-Kit.git`, and add the
-`WidgetDevelopmentKit` library to your widget extension (and to the app if it writes
-shared data). In `Package.swift`:
+### Swift Package Manager
+
+In Xcode, choose **File › Add Package Dependencies…** and enter the repository URL:
+
+```text
+https://github.com/muhittincamdali/iOS-Widget-Development-Kit.git
+```
+
+Or add it to the `dependencies` in your `Package.swift`:
 
 ```swift
 dependencies: [
     .package(url: "https://github.com/muhittincamdali/iOS-Widget-Development-Kit.git", branch: "main")
 ],
 targets: [
-    .target(name: "MyWidgets", dependencies: [
+    .target(name: "YourApp", dependencies: [
         .product(name: "WidgetDevelopmentKit", package: "iOS-Widget-Development-Kit")
     ])
 ]
 ```
 
-The `v1.0.0` tag predates the current code and does not build; use `main` until the next
-tagged release.
+The only tag, `v1.0.0`, predates the current code and does not build; use `main` until the
+next tagged release. The package has no third-party dependencies.
 
 ## Usage
 
-The examples below are copied from
-[`Tests/WidgetDevelopmentKitTests/ReadmeExamplesTests.swift`](Tests/WidgetDevelopmentKitTests/ReadmeExamplesTests.swift),
-so they are compiled on every test run.
+Every Swift example in this section is taken from
+[`Examples/WidgetKitExample`](Examples/WidgetKitExample), which CI builds, or from
+[`ReadmeExamplesTests.swift`](Tests/WidgetDevelopmentKitTests/ReadmeExamplesTests.swift),
+which is compiled with the tests. A test fails if a block here no longer matches that code.
 
-### Timeline provider
+### Read shared data in a timeline provider
 
-`TimelineSchedule` produces entry dates, `TimelineBuilder` sorts the entries and turns a
-`WidgetUpdatePolicy` into WidgetKit's reload policy, and `WidgetSnapshotStore` reads data
-the app saved to the shared App Group.
+`TimelineSchedule` produces the entry dates, `TimelineBuilder` sorts the entries and turns a
+`WidgetUpdatePolicy` into WidgetKit's reload policy, and `WidgetSnapshotStore` reads what the
+app saved to the shared App Group.
 
 ```swift
-struct StepsEntry: TimelineEntry {
-    let date: Date
-    let steps: Int
-}
-
 struct StepsProvider: TimelineProvider {
-    let store = WidgetSnapshotStore(defaults: UserDefaults(suiteName: "group.com.example.steps") ?? .standard)
+    let store = WidgetSnapshotStore(defaults: UserDefaults(suiteName: "group.com.example.widgets") ?? .standard)
 
     func placeholder(in context: Context) -> StepsEntry {
         StepsEntry(date: .now, steps: 6_000)
@@ -118,14 +177,19 @@ struct StepsProvider: TimelineProvider {
 }
 ```
 
-In the app, save the value and ask WidgetKit to reload:
+### Save data in the app
+
+The app writes the value with a lifetime and asks WidgetKit to reload the widget:
 
 ```swift
 try store.save(steps, forKey: "steps", lifetime: 30 * 60)
 WidgetCenter.shared.reloadTimelines(ofKind: "steps")
 ```
 
-### Widget view
+Add the **App Groups** capability to the app and the extension with the same identifier.
+The store uses `UserDefaults`, which is not encrypted, so keep secrets out of it.
+
+### Show an entry
 
 ```swift
 struct StepsWidgetView: View {
@@ -138,23 +202,13 @@ struct StepsWidgetView: View {
             .widgetURL(WidgetDeepLink(scheme: "steps", host: "today"))
     }
 }
-
-struct StepsWidget: Widget {
-    var body: some WidgetConfiguration {
-        StaticConfiguration(kind: "steps", provider: StepsProvider()) { entry in
-            StepsWidgetView(entry: entry)
-        }
-        .configurationDisplayName("Steps")
-        .supportedFamilies([.systemSmall])
-    }
-}
 ```
 
 Views that show time-dependent values (`CountdownWidget`, `StandByCountdownWidget`,
-`LockScreenCountdownWidget`) take a `referenceDate`; pass `entry.date` so each entry
-renders its own moment.
+`LockScreenCountdownWidget`) take a `referenceDate`; pass `entry.date` so each entry renders
+its own moment.
 
-### Interactive button
+### Add a button to a widget
 
 ```swift
 struct WaterButton: View {
@@ -166,13 +220,19 @@ struct WaterButton: View {
 }
 ```
 
-The intents run in the widget extension and write to `WidgetStateStore.shared`, which
-uses the App Group named by the `WidgetDevelopmentKitAppGroup` key in Info.plist. Add the
-key to both the app and the extension, and list `WidgetDevelopmentKitIntents` in your
-`AppIntentsPackage` so the intents are registered. The DocC article
-_Interactive Widgets_ covers the setup.
+The intents run in the widget extension and write to `WidgetStateStore.shared`, which uses
+the App Group named by the `WidgetDevelopmentKitAppGroup` key in Info.plist. Add the key to
+both the app and the extension, and register the package's intents:
 
-### Networking
+```swift
+struct AppIntentsRoot: AppIntentsPackage {
+    static var includedPackages: [any AppIntentsPackage.Type] {
+        [WidgetDevelopmentKitIntents.self]
+    }
+}
+```
+
+### Load data from a server
 
 ```swift
 struct RandomQuote: Decodable {
@@ -180,7 +240,8 @@ struct RandomQuote: Decodable {
 }
 
 func loadQuote() async throws -> RandomQuote {
-    let endpoint = Endpoint(base: URL(string: "https://api.example.com")!)
+    guard let base = URL(string: "https://api.example.com") else { throw URLError(.badURL) }
+    let endpoint = Endpoint(base: base)
         .appendingPath("v1/quotes/random")
         .adding(query: "lang", "en")
     guard let request = endpoint.request else { throw URLError(.badURL) }
@@ -189,12 +250,69 @@ func loadQuote() async throws -> RandomQuote {
 ```
 
 `WidgetDataLoader` uses an ephemeral session with short timeouts that does not wait for
-connectivity, and retries 5xx, 408, timeouts and offline errors (one retry by default, configurable with `RetryPolicy`) but
-not 4xx or decoding errors.
+connectivity. It retries 5xx and 408 responses, timeouts and offline errors (once by
+default; set a `RetryPolicy` to change it), but not 4xx responses or decoding errors.
+
+## Demo
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/images/home-screen-dark.png">
+  <img src="docs/images/home-screen-light.png" alt="Weather, water, fitness, countdown, quote and habit widgets rendered from the package" width="404">
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/images/charts-dark.png">
+  <img src="docs/images/charts-light.png" alt="Stats sparkline, progress ring, line chart and bar chart views" width="404">
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/images/lock-screen-dark.png">
+  <img src="docs/images/lock-screen-light.png" alt="Lock Screen battery, activity rings, countdown, weather and stats widgets" width="304">
+</picture>
+
+The images are rendered from the package's views with `ImageRenderer` by
+[`scripts/render-screenshots.sh`](scripts/render-screenshots.sh). They are drawn outside
+WidgetKit, so the widget frame, Lock Screen vibrancy and StandBy night mode are approximated
+rather than produced by the system.
+
+To try the widgets yourself, open
+[`Examples/WidgetKitExample/WidgetKitExample.xcodeproj`](Examples/WidgetKitExample) and run
+the **WidgetKitExample** scheme on an iPhone simulator; [`Examples/README.md`](Examples/README.md)
+explains the three widgets and how to add them to the Home Screen.
+
+## Documentation
+
+Reference documentation and articles:
+
+- [API reference](https://muhittincamdali.github.io/iOS-Widget-Development-Kit/documentation/widgetdevelopmentkit/)
+  on GitHub Pages, built from the DocC comments in the source.
+- In Xcode: **Product › Build Documentation**, or
+  `xcodebuild docbuild -scheme WidgetDevelopmentKit -destination 'generic/platform=iOS Simulator'`.
+
+## Guides
+
+- [Getting Started](https://muhittincamdali.github.io/iOS-Widget-Development-Kit/documentation/widgetdevelopmentkit/gettingstarted):
+  add a widget extension and the package, share data through an App Group, build the
+  timeline and render an entry.
+- [Interactive Widgets](https://muhittincamdali.github.io/iOS-Widget-Development-Kit/documentation/widgetdevelopmentkit/interactivewidgets):
+  configure the App Group, register the intents, add buttons and read their state in the
+  provider and the app.
+
+## Requirements
+
+| Platform  | Minimum version |
+| --------- | --------------- |
+| iOS       | 17.0            |
+| macOS     | 14.0            |
+| Toolchain | Swift 6.0       |
+
+Lock Screen views and Live Activities are iOS only. The macOS target exists so the
+platform-independent code and its tests run with `swift test`. CI builds with the default
+Xcode of GitHub's `macos-26` image; local development uses Xcode 27. Older Xcode versions have
+not been tried.
 
 ## Architecture
 
-```
+```text
 Sources/WidgetDevelopmentKit/
 ├── Core/            Pure helpers: clamping, formatting, month grid, countdown math
 ├── Timeline/        Update policy, timeline builder and schedule, snapshot store
@@ -211,57 +329,34 @@ Sources/WidgetDevelopmentKit/
 ```
 
 Views stay thin: arithmetic that can go wrong with real data (zero goals, `NaN`, reversed
-date ranges, daylight-saving days) lives in `Core` and `Timeline` as pure functions with
-unit tests. Types that touch storage or the network take their dependencies
-(`UserDefaults`, clock, transport, sleep) as parameters so they can be tested without
-an App Group or a server.
+date ranges, daylight-saving days) lives in `Core` and `Timeline` as pure functions with unit
+tests. Types that touch storage or the network take their dependencies (`UserDefaults`,
+clock, transport, sleep) as parameters, so they can be tested without an App Group or a
+server. SwiftUI view bodies are not snapshot-tested.
 
-## Testing
-
-```sh
-swift test                         # macOS: 74 tests
-xcodebuild test -scheme WidgetDevelopmentKit \
-  -destination 'platform=iOS Simulator,name=iPhone 17 Pro'   # iOS: 77 tests, 3 skipped
-scripts/render-screenshots.sh      # regenerate docs/images
-```
-
-The three skipped iOS tests render the README images and run only through
-`scripts/render-screenshots.sh`. If several simulators share a name, pass a UDID to the
-script or use `id=<UDID>` in the destination.
-
-Tests use Swift Testing and cover the helper logic (including edge cases such as `NaN`,
-zero totals, Monday-first calendars, leap months and DST transitions), the timeline and
-snapshot types, the deep link and color parsers, the retry behavior of the data loader,
-the state store, the state machine and the README examples. SwiftUI view bodies are not
-snapshot-tested.
-
-## Documentation
-
-The package includes a DocC catalog with a getting-started article and an
-interactive-widgets article. Build it with **Product > Build Documentation** in Xcode,
-or:
+Run the tests on macOS and on an iOS simulator:
 
 ```sh
-xcodebuild docbuild -scheme WidgetDevelopmentKit -destination 'generic/platform=iOS'
+swift test
+xcodebuild test -scheme WidgetDevelopmentKit -destination 'platform=iOS Simulator,name=iPhone 17 Pro'
 ```
 
-## Project history
+Three iOS tests are skipped on purpose: they render the README images and run only through
+`scripts/render-screenshots.sh`.
 
-The manifest at the `v1.0.0` tag does not load. After a mid-June 2026 rework the library
-target built, but it held only about 240 lines in six files; the rest of the Swift code in
-`Sources/` was not part of any target, and the test target did not compile because its
-Quick/Nimble tests used packages the manifest never declared. In October 2026 the code was
-restored from history, reworked where it was broken, and covered by tests; parts that
-could not work as written (for example, singletons tied to hard-coded App Group names and
-an intent that posted notifications from the widget extension) were removed. See
-[CHANGELOG.md](CHANGELOG.md) for details.
+## Roadmap
+
+- Tag a release that matches the current code, so the package can be added by version.
+- Snapshot tests for the view bodies.
+- An example Live Activity in the example app.
+
+The [CHANGELOG](CHANGELOG.md) records what changed so far, including how the package was
+restored in October 2026 after the `v1.0.0` code turned out not to build.
 
 ## Contributing
 
-Issues and pull requests are welcome. Please run `swift test` and the iOS simulator tests
-before opening a pull request, and add tests for new logic. See
-[CONTRIBUTING.md](CONTRIBUTING.md).
+Contributions are welcome. Read the [contributing guide](https://github.com/muhittincamdali/iOS-Widget-Development-Kit/blob/main/CONTRIBUTING.md) and the [code of conduct](https://github.com/muhittincamdali/.github/blob/main/CODE_OF_CONDUCT.md) before opening a pull request. Report security issues privately as described in the [security policy](https://github.com/muhittincamdali/.github/blob/main/SECURITY.md).
 
 ## License
 
-MIT. See [LICENSE](LICENSE).
+Released under the MIT license. See [LICENSE](LICENSE).
