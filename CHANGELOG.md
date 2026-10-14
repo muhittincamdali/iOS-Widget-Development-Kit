@@ -7,12 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-This is the first state of the repository in which the package builds and its tests run.
-Before this work, most Swift files were outside every build target, the manifest pointed at
-test folders that did not exist and depended on packages no source file used, so neither
-`swift build` nor `swift test` could succeed. The changes below restore the code from
-history, rework the parts that were broken, and remove the parts that could not work.
-Because the public API changes substantially, the next release should be a new major version.
+This is the first state of the repository in which the whole package builds and its tests
+run. The manifest at the `v1.0.0` tag does not load. After a mid-June 2026 rework the
+library target built, but it held only about 240 lines in six files under
+`Sources/WidgetDevelopmentKit`; the rest of the Swift code was outside every target, the
+manifest depended on a package no source file used, and the test target did not compile
+because its Quick/Nimble tests in `Tests/Unit` used packages the manifest never declared.
+The changes below restore the code from history, rework the parts that were broken, and
+remove the parts that could not work. Because the public API changes substantially, the
+next release should be a new major version.
 
 ### Added
 
@@ -63,8 +66,10 @@ Because the public API changes substantially, the next release should be a new m
 
 - About 10,500 lines in `Sources/Enterprise`, `Sources/Integration`, `Sources/Analytics`,
   `Sources/Widgets` and `Sources/LiveData`, plus about 6,000 lines of Quick/Nimble tests,
-  demo app and examples, and the `Documentation/` folder that described them. None of it
-  was compiled by any target, and much of it referenced types that did not exist.
+  demo app and examples, and the `Documentation/` folder that described them. The sources,
+  demo app and examples were not compiled by any target, the Quick/Nimble tests belonged
+  to a test target that could not compile, and much of the code referenced types that did
+  not exist.
 - `WidgetConfiguration` (it shadowed SwiftUI's protocol), the no-op `WidgetDevelopmentKit`
   singleton, `TimelinePrewarmer`, `WidgetGallery`, `SmartTimelineProvider` (it force-cast
   `nil` to the data type), the Timer-based reload manager, and storage, migration and

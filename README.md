@@ -242,9 +242,11 @@ xcodebuild docbuild -scheme WidgetDevelopmentKit -destination 'generic/platform=
 
 ## Project history
 
-Until October 2026 most of this repository's Swift code was not part of any build target,
-and the manifest did not resolve, so the package could not be built or tested. The code was
-then restored from history, reworked where it was broken, and covered by tests; parts that
+The manifest at the `v1.0.0` tag does not load. After a mid-June 2026 rework the library
+target built, but it held only about 240 lines in six files; the rest of the Swift code in
+`Sources/` was not part of any target, and the test target did not compile because its
+Quick/Nimble tests used packages the manifest never declared. In October 2026 the code was
+restored from history, reworked where it was broken, and covered by tests; parts that
 could not work as written (for example, singletons tied to hard-coded App Group names and
 an intent that posted notifications from the widget extension) were removed. See
 [CHANGELOG.md](CHANGELOG.md) for details.
