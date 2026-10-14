@@ -1,6 +1,8 @@
-// The code in this file is copied verbatim into README.md. Keeping it in the test
-// target means the README examples are compiled on every CI run. The last example is
-// copied from the Interactive Widgets DocC article.
+// README.md quotes the interactive button and the networking example below; its other
+// examples come from Examples/WidgetKitExample. The steps provider is repeated here so
+// its timeline can be tested, and the last example is the one in the Interactive Widgets
+// DocC article. ReadmeSyncTests checks that every Swift block in README.md appears in
+// this file or in Examples/.
 
 import AppIntents
 import Foundation
@@ -9,14 +11,14 @@ import Testing
 import WidgetKit
 import WidgetDevelopmentKit
 
-// README: Timeline provider
+// Same provider as Examples/WidgetKitExample/Shared/Steps.swift
 struct StepsEntry: TimelineEntry {
     let date: Date
     let steps: Int
 }
 
 struct StepsProvider: TimelineProvider {
-    let store = WidgetSnapshotStore(defaults: UserDefaults(suiteName: "group.com.example.steps") ?? .standard)
+    let store = WidgetSnapshotStore(defaults: UserDefaults(suiteName: "group.com.example.widgets") ?? .standard)
 
     func placeholder(in context: Context) -> StepsEntry {
         StepsEntry(date: .now, steps: 6_000)
@@ -42,7 +44,7 @@ struct StepsProvider: TimelineProvider {
     }
 }
 
-// README: Widget view
+// Same view and configuration as Examples/WidgetKitExample
 struct StepsWidgetView: View {
     let entry: StepsEntry
 
@@ -79,7 +81,8 @@ struct RandomQuote: Decodable {
 }
 
 func loadQuote() async throws -> RandomQuote {
-    let endpoint = Endpoint(base: URL(string: "https://api.example.com")!)
+    guard let base = URL(string: "https://api.example.com") else { throw URLError(.badURL) }
+    let endpoint = Endpoint(base: base)
         .appendingPath("v1/quotes/random")
         .adding(query: "lang", "en")
     guard let request = endpoint.request else { throw URLError(.badURL) }
