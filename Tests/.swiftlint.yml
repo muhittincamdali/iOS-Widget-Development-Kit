@@ -1,0 +1,4 @@
+# Tests may force-unwrap values they construct themselves (fixed URLs, dates, test
+# fixtures); a crash there is a failing test, not a user-facing bug.
+disabled_rules:
+  - force_unwrapping
