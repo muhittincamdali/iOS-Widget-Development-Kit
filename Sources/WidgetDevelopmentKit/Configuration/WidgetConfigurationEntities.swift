@@ -106,7 +106,9 @@ public struct AccentColorQuery: EntityQuery {
 ///
 /// ```swift
 /// struct AppIntentsRoot: AppIntentsPackage {
-///     static let includedPackages: [any AppIntentsPackage.Type] = [WidgetDevelopmentKitIntents.self]
+///     static var includedPackages: [any AppIntentsPackage.Type] {
+///         [WidgetDevelopmentKitIntents.self]
+///     }
 /// }
 /// ```
 public struct WidgetDevelopmentKitIntents: AppIntentsPackage {}

@@ -1,6 +1,8 @@
 // The code in this file is copied verbatim into README.md. Keeping it in the test
-// target means the README examples are compiled on every CI run.
+// target means the README examples are compiled on every CI run. The last example is
+// copied from the Interactive Widgets DocC article.
 
+import AppIntents
 import Foundation
 import SwiftUI
 import Testing
@@ -92,5 +94,12 @@ struct ReadmeExamplesTests {
         #expect(timeline.entries.count == 4)
         #expect(timeline.entries.last?.date == now.addingTimeInterval(45 * 60))
         #expect(timeline.policy == .after(now.addingTimeInterval(60 * 60)))
+    }
+}
+
+// DocC article "Interactive Widgets": register the package's intents
+struct AppIntentsRoot: AppIntentsPackage {
+    static var includedPackages: [any AppIntentsPackage.Type] {
+        [WidgetDevelopmentKitIntents.self]
     }
 }

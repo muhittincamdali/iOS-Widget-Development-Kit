@@ -27,7 +27,7 @@ Create an App Group shared by the app and the extension, then write data from th
 with ``WidgetSnapshotStore``:
 
 ```swift
-let store = WidgetSnapshotStore(defaults: UserDefaults(suiteName: "group.com.example.steps")!)
+let store = WidgetSnapshotStore(defaults: UserDefaults(suiteName: "group.com.example.steps") ?? .standard)
 try store.save(steps, forKey: "steps", lifetime: 30 * 60)
 WidgetCenter.shared.reloadTimelines(ofKind: "steps")
 ```

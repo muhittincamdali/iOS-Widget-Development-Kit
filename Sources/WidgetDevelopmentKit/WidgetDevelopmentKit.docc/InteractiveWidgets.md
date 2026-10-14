@@ -23,7 +23,9 @@ listed in an `AppIntentsPackage`:
 
 ```swift
 struct AppIntentsRoot: AppIntentsPackage {
-    static let includedPackages: [any AppIntentsPackage.Type] = [WidgetDevelopmentKitIntents.self]
+    static var includedPackages: [any AppIntentsPackage.Type] {
+        [WidgetDevelopmentKitIntents.self]
+    }
 }
 ```
 
