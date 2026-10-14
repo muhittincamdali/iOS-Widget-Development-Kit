@@ -1,0 +1,32 @@
+# Runs SwiftLint with .swiftlint.yml. The container image is pinned by digest, so a new
+# SwiftLint release cannot change the result without a commit here.
+name: Lint
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: lint-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  swiftlint:
+    name: SwiftLint
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    container:
+      image: ghcr.io/realm/swiftlint:0.63.2@sha256:8db376ff8a26e56fa506b56b8c70ea9c5583dc52d5746ce23b6c2c4d4ee00e31
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: SwiftLint
+        run: swiftlint lint --strict --reporter github-actions-logging
