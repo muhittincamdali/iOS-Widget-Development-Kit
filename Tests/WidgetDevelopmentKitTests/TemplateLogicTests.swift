@@ -37,4 +37,11 @@ struct TemplateLogicTests {
         let widget = WaterTrackerWidget(currentIntake: 0, dailyGoal: 10_000, glassSize: 100)
         #expect(widget.glassGoal == 12)
     }
+
+    @Test func scrubberIndexStaysInRange() {
+        typealias Scrubber = WidgetTimelineScrubber<EmptyView, StepsEntry>
+        #expect(Scrubber.clampedIndex(5, count: 3) == 2)
+        #expect(Scrubber.clampedIndex(-1, count: 3) == 0)
+        #expect(Scrubber.clampedIndex(4, count: 0) == 0)
+    }
 }
