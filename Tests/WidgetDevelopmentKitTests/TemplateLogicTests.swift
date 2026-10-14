@@ -2,6 +2,7 @@ import SwiftUI
 import Testing
 @testable import WidgetDevelopmentKit
 
+@MainActor
 @Suite("Template logic")
 struct TemplateLogicTests {
     @Test(arguments: [
