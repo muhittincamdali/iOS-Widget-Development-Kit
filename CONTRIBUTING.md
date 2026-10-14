@@ -1,56 +1,38 @@
 # Contributing
 
-Thanks for your interest in contributing! Here's how to get started.
+Thanks for your interest in improving WidgetDevelopmentKit.
 
-## Getting Started
+## Development setup
 
-1. Fork the repository
-2. Clone your fork: `git clone https://github.com/YOUR_USERNAME/REPO_NAME.git`
-3. Create a branch: `git checkout -b feature/your-feature`
-4. Make your changes
-5. Push to your fork: `git push origin feature/your-feature`
-6. Open a Pull Request
-
-## Development Setup
-
-```bash
-# Clone the repo
-git clone https://github.com/muhittincamdali/REPO_NAME.git
-cd REPO_NAME
-
-# Open in Xcode
-open Package.swift
+```sh
+git clone https://github.com/muhittincamdali/iOS-Widget-Development-Kit.git
+cd iOS-Widget-Development-Kit
+swift test
 ```
 
-## Code Style
+Open `Package.swift` in Xcode to work on the views. Lock Screen views and Live Activities
+only compile for iOS, so also run the tests on a simulator before opening a pull request:
 
-- Follow Swift API Design Guidelines
-- Use SwiftLint (config included)
-- Write descriptive commit messages
-- Add documentation for public APIs
+```sh
+xcodebuild test -scheme WidgetDevelopmentKit \
+  -destination 'platform=iOS Simulator,name=iPhone 17 Pro'
+```
 
-## Commit Messages
+## Guidelines
 
-Use conventional commits:
-- `feat:` new feature
-- `fix:` bug fix
-- `docs:` documentation
-- `refactor:` code refactor
-- `test:` tests
+- Keep views thin. Put arithmetic and parsing in pure functions and add tests for them,
+  including edge cases (zero, negative, `NaN`, empty collections, DST and locale differences).
+- Inject dependencies such as `UserDefaults`, clocks and network transports so code can be
+  tested without an App Group or a server.
+- Document public API with DocC comments. `xcodebuild docbuild` should report no warnings.
+- If you change a view shown in the README, regenerate the images with
+  `scripts/render-screenshots.sh`.
+- Use [Conventional Commits](https://www.conventionalcommits.org/) (`feat:`, `fix:`, `docs:`,
+  `test:`, `refactor:`, `ci:`, `chore:`).
 
-Example: `feat: add dark mode support`
+## Pull requests
 
-## Pull Request Process
-
-1. Update README if needed
-2. Add tests for new features
-3. Ensure CI passes
-4. Request review from maintainers
-
-## Code of Conduct
-
-Be respectful and constructive. We're all here to build great software together.
-
-## Questions?
-
-Open an issue or reach out!
+1. Create a branch from `main`.
+2. Make the change with tests.
+3. Make sure CI passes (macOS tests, iOS simulator tests and the documentation build).
+4. Describe what changed and why in the pull request.
