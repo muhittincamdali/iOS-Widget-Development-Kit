@@ -221,9 +221,13 @@ an App Group or a server.
 ```sh
 swift test                         # macOS: 74 tests
 xcodebuild test -scheme WidgetDevelopmentKit \
-  -destination 'platform=iOS Simulator,name=iPhone 17 Pro'   # iOS simulator
+  -destination 'platform=iOS Simulator,name=iPhone 17 Pro'   # iOS: 77 tests, 3 skipped
 scripts/render-screenshots.sh      # regenerate docs/images
 ```
+
+The three skipped iOS tests render the README images and run only through
+`scripts/render-screenshots.sh`. If several simulators share a name, pass a UDID to the
+script or use `id=<UDID>` in the destination.
 
 Tests use Swift Testing and cover the helper logic (including edge cases such as `NaN`,
 zero totals, Monday-first calendars, leap months and DST transitions), the timeline and

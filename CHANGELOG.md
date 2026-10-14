@@ -21,7 +21,8 @@ next release should be a new major version.
 
 - Unit tests with Swift Testing for the helper logic, timelines, snapshot store, deep links,
   hex colors, configuration entities, data loader and retry policy, state store, Live
-  Activity state machine and the README examples (74 tests on macOS).
+  Activity state machine and the README examples (74 tests on macOS; 77 on the iOS
+  simulator, which adds Live Activity state tests).
 - `WidgetMath`, `WidgetFormat`, `MonthGrid` and `CountdownComponents`: pure helpers for
   progress clamping, compact numbers, playback times, month grids and countdowns.
 - `WidgetUpdatePolicy`, `TimelineBuilder`, `TimelineSchedule` and `WidgetSnapshotStore`,
