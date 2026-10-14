@@ -1,45 +1,14 @@
 # Security Policy
 
-If you discover a security vulnerability, please report it responsibly.
+## Supported versions
 
-## Reporting a Vulnerability
-- Do not open public issues for vulnerabilities
-- Email the maintainer with steps to reproduce
-- We will acknowledge receipt and work on a timely fix
+Only the `main` branch receives fixes.
 
-## Supported Versions
-Security fixes are applied to the latest mainline branch.
+## Reporting a vulnerability
 
-## Overview
-This document belongs to the iOS Widget Development Kit repository. It explains goals, scope, and usage.
+Please do not open a public issue for a security problem. Email
+muhittincamdali@gmail.com with a description, the affected code and steps to reproduce.
 
-## Architecture
-Clean Architecture and SOLID are followed to ensure maintainability and scalability.
-
-## Installation (SPM)
-```swift
-.package(url: "https://github.com/owner/iOS-Widget-Development-Kit.git", from: "1.0.0")
-```
-
-## Quick Start
-```swift
-// Add a concise example usage here
-```
-
-## API Reference
-Describe key types and methods exposed by this module.
-
-## Usage Examples
-Provide several concrete end-to-end examples.
-
-## Performance
-List relevant performance considerations.
-
-## Security
-Document security-sensitive areas and mitigations.
-
-## Troubleshooting
-Known issues and solutions.
-
-## FAQ
-Answer common questions with clear, actionable guidance.
+The package stores widget state and cached data in `UserDefaults` (usually an App Group
+suite). That storage is not encrypted, so do not put credentials or other secrets in
+`WidgetSnapshotStore` or `WidgetStateStore`.
