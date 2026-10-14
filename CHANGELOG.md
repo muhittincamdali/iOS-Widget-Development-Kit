@@ -7,15 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-This is the first state of the repository in which the whole package builds and its tests
-run. The manifest at the `v1.0.0` tag does not load. After a mid-June 2026 rework the
-library target built, but it held only about 240 lines in six files under
+## [2.0.0] - 2026-10-14
+
+This is the first release in which the whole package builds and its tests run. The
+manifest at the `v1.0.0` tag does not load. After a mid-June 2026 rework the library
+target built, but it held only about 240 lines in six files under
 `Sources/WidgetDevelopmentKit`; the rest of the Swift code was outside every target, the
 manifest depended on a package no source file used, and the test target did not compile
 because its Quick/Nimble tests in `Tests/Unit` used packages the manifest never declared.
 The changes below restore the code from history, rework the parts that were broken, and
-remove the parts that could not work. Because the public API changes substantially, the
-next release should be a new major version.
+remove the parts that could not work. Because the public API changes substantially, this
+release is a new major version.
 
 ### Added
 
@@ -97,12 +99,14 @@ next release should be a new major version.
   the package.
 - The repository's own code of conduct, security policy, issue forms, pull request template
   and funding file; the shared files in `muhittincamdali/.github` apply instead.
-- Earlier entries in this file, which listed versions (2.x and 3.x) that were never tagged.
+- Earlier entries in this file, which listed 2.x and 3.x versions that were never tagged
+  and are unrelated to this release.
 
 ## [1.0.0] - 2026-02-02
 
 Tagged release. The manifest at this tag fails to load (`invalid custom path` for the test
 target), so this version cannot be built.
 
-[Unreleased]: https://github.com/muhittincamdali/iOS-Widget-Development-Kit/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/muhittincamdali/iOS-Widget-Development-Kit/compare/v2.0.0...HEAD
+[2.0.0]: https://github.com/muhittincamdali/iOS-Widget-Development-Kit/compare/v1.0.0...v2.0.0
 [1.0.0]: https://github.com/muhittincamdali/iOS-Widget-Development-Kit/releases/tag/v1.0.0
