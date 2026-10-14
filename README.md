@@ -45,10 +45,11 @@ The package has no third-party dependencies.
 
 ## Requirements
 
-- Swift 6 toolchain (Xcode 16 or later); the package builds in the Swift 6 language mode.
+- A Swift 6 toolchain: the manifest uses `swift-tools-version: 6.0` and the package builds
+  in the Swift 6 language mode. It has been built and tested only with Xcode 27 (Swift 6.4);
+  CI runs on GitHub's `macos-26` image. Older Xcode versions have not been tried.
 - iOS 17 or later. The macOS 14 target exists so that the platform-independent code and
   the unit tests can run with `swift test`; Lock Screen views and Live Activities are iOS only.
-- Developed and tested locally with Xcode 27 and Swift 6.4. CI runs on GitHub's `macos-26` image.
 
 ## Installation
 
