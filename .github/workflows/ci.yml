@@ -4,24 +4,51 @@ on:
   push:
     branches: [main]
   pull_request:
-    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  build:
-    runs-on: macos-14
+  macos:
+    name: macOS (swift build + swift test)
+    runs-on: macos-26
+    timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
-      
-      - name: Select Xcode
-        run: sudo xcode-select -s /Applications/Xcode_15.2.app
-      
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Toolchain
+        run: swift --version
       - name: Build
         run: swift build
-      
       - name: Test
         run: swift test
-      
-      - name: SwiftLint
+
+  ios:
+    name: iOS Simulator (xcodebuild test)
+    runs-on: macos-26
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Test
         run: |
-          brew install swiftlint
-          swiftlint lint --reporter github-actions-logging || true
+          xcodebuild test \
+            -scheme WidgetDevelopmentKit \
+            -destination 'platform=iOS Simulator,name=iPhone 17 Pro,OS=latest' \
+            -skipPackagePluginValidation
+
+  docs:
+    name: DocC
+    runs-on: macos-26
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Build documentation
+        run: |
+          xcodebuild docbuild \
+            -scheme WidgetDevelopmentKit \
+            -destination 'generic/platform=iOS' \
+            -derivedDataPath .build/docbuild
