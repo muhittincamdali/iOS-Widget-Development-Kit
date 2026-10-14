@@ -14,6 +14,11 @@ let package = Package(
         .target(
             name: "WidgetDevelopmentKit",
             path: "Sources/WidgetDevelopmentKit"
+        ),
+        .testTarget(
+            name: "WidgetDevelopmentKitTests",
+            dependencies: ["WidgetDevelopmentKit"],
+            path: "Tests/WidgetDevelopmentKitTests"
         )
     ]
 )
