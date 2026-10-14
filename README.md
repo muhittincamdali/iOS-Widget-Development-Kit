@@ -123,7 +123,7 @@ Or add it to the `dependencies` in your `Package.swift`:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/muhittincamdali/iOS-Widget-Development-Kit.git", branch: "main")
+    .package(url: "https://github.com/muhittincamdali/iOS-Widget-Development-Kit.git", from: "2.0.0")
 ],
 targets: [
     .target(name: "YourApp", dependencies: [
@@ -132,8 +132,8 @@ targets: [
 ]
 ```
 
-The only tag, `v1.0.0`, predates the current code and does not build; use `main` until the
-next tagged release. The package has no third-party dependencies.
+Releases start at 2.0.0; the earlier `v1.0.0` tag predates the current code and does not
+build. The package has no third-party dependencies.
 
 ## Usage
 

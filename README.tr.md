@@ -1,4 +1,4 @@
-<!-- i18n-source: README.md@21d649e6f03399b9ae6f8c248f63c32d4a134aab status=reviewed -->
+<!-- i18n-source: README.md@a6ec189434335e917ee452566170f8aecc856cd6 status=reviewed -->
 <!-- brand:start -->
 
 <p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/muhittincamdali/iOS-Widget-Development-Kit/main/.github/brand/banner-tr-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/muhittincamdali/iOS-Widget-Development-Kit/main/.github/brand/banner-tr-light.svg"><img src="https://raw.githubusercontent.com/muhittincamdali/iOS-Widget-Development-Kit/main/.github/brand/banner-tr-light.svg" alt="iOS Widget Development Kit: WidgetKit widget'ları ve Live Activities için SwiftUI görünümleri ve zaman çizelgesi yardımcıları."></picture></p>
@@ -131,7 +131,7 @@ Ya da `Package.swift` dosyanızdaki `dependencies` listesine ekleyin:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/muhittincamdali/iOS-Widget-Development-Kit.git", branch: "main")
+    .package(url: "https://github.com/muhittincamdali/iOS-Widget-Development-Kit.git", from: "2.0.0")
 ],
 targets: [
     .target(name: "YourApp", dependencies: [
@@ -140,8 +140,8 @@ targets: [
 ]
 ```
 
-Tek etiket olan `v1.0.0` güncel koddan eskidir ve derlenmez; bir sonraki etiketli sürüme
-kadar `main` dalını kullanın. Paketin üçüncü taraf bağımlılığı yoktur.
+Sürümler 2.0.0 ile başlar; daha önceki `v1.0.0` etiketi güncel koddan eskidir ve
+derlenmez. Paketin üçüncü taraf bağımlılığı yoktur.
 
 ## Kullanım
 

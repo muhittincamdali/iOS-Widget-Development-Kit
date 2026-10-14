@@ -1,4 +1,4 @@
-<!-- i18n-source: README.md@21d649e6f03399b9ae6f8c248f63c32d4a134aab status=reviewed -->
+<!-- i18n-source: README.md@a6ec189434335e917ee452566170f8aecc856cd6 status=reviewed -->
 <!-- brand:start -->
 
 <p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/muhittincamdali/iOS-Widget-Development-Kit/main/.github/brand/banner-pt-BR-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/muhittincamdali/iOS-Widget-Development-Kit/main/.github/brand/banner-pt-BR-light.svg"><img src="https://raw.githubusercontent.com/muhittincamdali/iOS-Widget-Development-Kit/main/.github/brand/banner-pt-BR-light.svg" alt="iOS Widget Development Kit: Views SwiftUI e utilitários de timeline para widgets do WidgetKit e Live Activities."></picture></p>
@@ -130,7 +130,7 @@ Ou adicione-o às `dependencies` do seu `Package.swift`:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/muhittincamdali/iOS-Widget-Development-Kit.git", branch: "main")
+    .package(url: "https://github.com/muhittincamdali/iOS-Widget-Development-Kit.git", from: "2.0.0")
 ],
 targets: [
     .target(name: "YourApp", dependencies: [
@@ -139,8 +139,8 @@ targets: [
 ]
 ```
 
-A única tag, `v1.0.0`, é anterior ao código atual e não compila; use `main` até a próxima
-versão com tag. O pacote não tem dependências de terceiros.
+As versões começam em 2.0.0; a tag anterior, `v1.0.0`, é anterior ao código atual e não
+compila. O pacote não tem dependências de terceiros.
 
 ## Uso
 

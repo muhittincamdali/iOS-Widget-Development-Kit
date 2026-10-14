@@ -1,4 +1,4 @@
-<!-- i18n-source: README.md@21d649e6f03399b9ae6f8c248f63c32d4a134aab status=reviewed -->
+<!-- i18n-source: README.md@a6ec189434335e917ee452566170f8aecc856cd6 status=reviewed -->
 <!-- brand:start -->
 
 <p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/muhittincamdali/iOS-Widget-Development-Kit/main/.github/brand/banner-de-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/muhittincamdali/iOS-Widget-Development-Kit/main/.github/brand/banner-de-light.svg"><img src="https://raw.githubusercontent.com/muhittincamdali/iOS-Widget-Development-Kit/main/.github/brand/banner-de-light.svg" alt="iOS Widget Development Kit: SwiftUI-Views und Timeline-Hilfen für WidgetKit-Widgets und Live Activities."></picture></p>
@@ -131,7 +131,7 @@ Oder füge es zu den `dependencies` in deiner `Package.swift` hinzu:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/muhittincamdali/iOS-Widget-Development-Kit.git", branch: "main")
+    .package(url: "https://github.com/muhittincamdali/iOS-Widget-Development-Kit.git", from: "2.0.0")
 ],
 targets: [
     .target(name: "YourApp", dependencies: [
@@ -140,9 +140,8 @@ targets: [
 ]
 ```
 
-Das einzige Tag, `v1.0.0`, ist älter als der aktuelle Code und lässt sich nicht bauen;
-verwende `main` bis zum nächsten getaggten Release. Das Paket hat keine Abhängigkeiten von
-Drittanbietern.
+Releases beginnen mit 2.0.0; das frühere Tag `v1.0.0` ist älter als der aktuelle Code und
+lässt sich nicht bauen. Das Paket hat keine Abhängigkeiten von Drittanbietern.
 
 ## Verwendung
 

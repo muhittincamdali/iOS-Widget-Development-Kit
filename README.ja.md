@@ -1,4 +1,4 @@
-<!-- i18n-source: README.md@21d649e6f03399b9ae6f8c248f63c32d4a134aab status=reviewed -->
+<!-- i18n-source: README.md@a6ec189434335e917ee452566170f8aecc856cd6 status=reviewed -->
 <!-- brand:start -->
 
 <p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/muhittincamdali/iOS-Widget-Development-Kit/main/.github/brand/banner-ja-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/muhittincamdali/iOS-Widget-Development-Kit/main/.github/brand/banner-ja-light.svg"><img src="https://raw.githubusercontent.com/muhittincamdali/iOS-Widget-Development-Kit/main/.github/brand/banner-ja-light.svg" alt="iOS Widget Development Kit: WidgetKit ウィジェットと Live Activities のための SwiftUI ビューとタイムラインヘルパー。"></picture></p>
@@ -109,7 +109,7 @@ https://github.com/muhittincamdali/iOS-Widget-Development-Kit.git
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/muhittincamdali/iOS-Widget-Development-Kit.git", branch: "main")
+    .package(url: "https://github.com/muhittincamdali/iOS-Widget-Development-Kit.git", from: "2.0.0")
 ],
 targets: [
     .target(name: "YourApp", dependencies: [
@@ -118,7 +118,7 @@ targets: [
 ]
 ```
 
-唯一のタグ `v1.0.0` は現在のコードより古く、ビルドできません。次のタグ付きリリースまでは `main` を使ってください。このパッケージはサードパーティの依存関係を持ちません。
+リリースは 2.0.0 から始まります。それ以前の `v1.0.0` タグは現在のコードより古く、ビルドできません。このパッケージはサードパーティの依存関係を持ちません。
 
 ## 使い方
 

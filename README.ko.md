@@ -1,4 +1,4 @@
-<!-- i18n-source: README.md@21d649e6f03399b9ae6f8c248f63c32d4a134aab status=reviewed -->
+<!-- i18n-source: README.md@a6ec189434335e917ee452566170f8aecc856cd6 status=reviewed -->
 <!-- brand:start -->
 
 <p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/muhittincamdali/iOS-Widget-Development-Kit/main/.github/brand/banner-ko-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/muhittincamdali/iOS-Widget-Development-Kit/main/.github/brand/banner-ko-light.svg"><img src="https://raw.githubusercontent.com/muhittincamdali/iOS-Widget-Development-Kit/main/.github/brand/banner-ko-light.svg" alt="iOS Widget Development Kit: WidgetKit 위젯과 Live Activities를 위한 SwiftUI 뷰와 타임라인 헬퍼."></picture></p>
@@ -109,7 +109,7 @@ https://github.com/muhittincamdali/iOS-Widget-Development-Kit.git
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/muhittincamdali/iOS-Widget-Development-Kit.git", branch: "main")
+    .package(url: "https://github.com/muhittincamdali/iOS-Widget-Development-Kit.git", from: "2.0.0")
 ],
 targets: [
     .target(name: "YourApp", dependencies: [
@@ -118,7 +118,7 @@ targets: [
 ]
 ```
 
-유일한 태그인 `v1.0.0`은 현재 코드보다 오래되었고 빌드되지 않습니다. 다음 태그 릴리스가 나올 때까지 `main`을 사용하세요. 이 패키지에는 서드파티 의존성이 없습니다.
+릴리스는 2.0.0부터 시작합니다. 이전 태그인 `v1.0.0`은 현재 코드보다 오래되었고 빌드되지 않습니다. 이 패키지에는 서드파티 의존성이 없습니다.
 
 ## 사용법
 

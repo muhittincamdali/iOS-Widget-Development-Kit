@@ -1,4 +1,4 @@
-<!-- i18n-source: README.md@21d649e6f03399b9ae6f8c248f63c32d4a134aab status=reviewed -->
+<!-- i18n-source: README.md@a6ec189434335e917ee452566170f8aecc856cd6 status=reviewed -->
 <!-- brand:start -->
 
 <p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/muhittincamdali/iOS-Widget-Development-Kit/main/.github/brand/banner-zh-CN-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/muhittincamdali/iOS-Widget-Development-Kit/main/.github/brand/banner-zh-CN-light.svg"><img src="https://raw.githubusercontent.com/muhittincamdali/iOS-Widget-Development-Kit/main/.github/brand/banner-zh-CN-light.svg" alt="iOS Widget Development Kit: 用于 WidgetKit 小组件和 Live Activities 的 SwiftUI 视图与时间线辅助工具。"></picture></p>
@@ -109,7 +109,7 @@ https://github.com/muhittincamdali/iOS-Widget-Development-Kit.git
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/muhittincamdali/iOS-Widget-Development-Kit.git", branch: "main")
+    .package(url: "https://github.com/muhittincamdali/iOS-Widget-Development-Kit.git", from: "2.0.0")
 ],
 targets: [
     .target(name: "YourApp", dependencies: [
@@ -118,7 +118,7 @@ targets: [
 ]
 ```
 
-唯一的标签 `v1.0.0` 早于当前代码，无法编译；在发布下一个带标签的版本之前，请使用 `main` 分支。该软件包没有第三方依赖。
+可用版本从 2.0.0 开始；更早的 `v1.0.0` 标签早于当前代码，无法编译。该软件包没有第三方依赖。
 
 ## 使用方法
 
