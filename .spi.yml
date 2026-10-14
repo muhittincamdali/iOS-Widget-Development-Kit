@@ -1,0 +1,7 @@
+version: 1
+builder:
+  configs:
+    - platform: ios
+      scheme: WidgetDevelopmentKit
+    - platform: macos-spm
+    - documentation_targets: [WidgetDevelopmentKit]

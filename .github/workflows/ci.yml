@@ -1,27 +1,20 @@
+# Managed by the repository kit (muhittincamdali/.github). Edit the inputs, keep the structure.
 name: CI
 
 on:
   push:
     branches: [main]
   pull_request:
-    branches: [main]
+  workflow_dispatch:
+
+permissions: {}
 
 jobs:
-  build:
-    runs-on: macos-14
-    steps:
-      - uses: actions/checkout@v4
-      
-      - name: Select Xcode
-        run: sudo xcode-select -s /Applications/Xcode_15.2.app
-      
-      - name: Build
-        run: swift build
-      
-      - name: Test
-        run: swift test
-      
-      - name: SwiftLint
-        run: |
-          brew install swiftlint
-          swiftlint lint --reporter github-actions-logging || true
+  swift:
+    permissions:
+      contents: read
+    uses: muhittincamdali/.github/.github/workflows/swift-ci.yml@5d3c4432dae8895b16ce3caa2f78398966953212 # v1
+    with:
+      platforms: '["iOS","macOS"]'
+      # Lock Screen views and Live Activities compile only for iOS; run the tests there too.
+      test-on-simulator: true

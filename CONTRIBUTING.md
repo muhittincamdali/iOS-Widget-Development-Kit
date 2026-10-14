@@ -1,56 +1,59 @@
 # Contributing
 
-Thanks for your interest in contributing! Here's how to get started.
+Thanks for your interest in improving WidgetDevelopmentKit. This file has the steps that are
+specific to this package; the general rules (code of conduct, security reports) are in
+[muhittincamdali/.github](https://github.com/muhittincamdali/.github).
 
-## Getting Started
+## Development setup
 
-1. Fork the repository
-2. Clone your fork: `git clone https://github.com/YOUR_USERNAME/REPO_NAME.git`
-3. Create a branch: `git checkout -b feature/your-feature`
-4. Make your changes
-5. Push to your fork: `git push origin feature/your-feature`
-6. Open a Pull Request
-
-## Development Setup
-
-```bash
-# Clone the repo
-git clone https://github.com/muhittincamdali/REPO_NAME.git
-cd REPO_NAME
-
-# Open in Xcode
-open Package.swift
+```sh
+git clone https://github.com/muhittincamdali/iOS-Widget-Development-Kit.git
+cd iOS-Widget-Development-Kit
+swift test
 ```
 
-## Code Style
+Open `Package.swift` in Xcode to work on the views. Lock Screen views and Live Activities
+only compile for iOS, so also run the tests on a simulator before opening a pull request:
 
-- Follow Swift API Design Guidelines
-- Use SwiftLint (config included)
-- Write descriptive commit messages
-- Add documentation for public APIs
+```sh
+xcodebuild test -scheme WidgetDevelopmentKit \
+  -destination 'platform=iOS Simulator,name=iPhone 17 Pro'
+```
 
-## Commit Messages
+Build the example app and run SwiftLint as CI does:
 
-Use conventional commits:
-- `feat:` new feature
-- `fix:` bug fix
-- `docs:` documentation
-- `refactor:` code refactor
-- `test:` tests
+```sh
+xcodebuild build -project Examples/WidgetKitExample/WidgetKitExample.xcodeproj \
+  -scheme WidgetKitExample -destination 'generic/platform=iOS Simulator' CODE_SIGNING_ALLOWED=NO
+swiftlint lint --strict
+```
 
-Example: `feat: add dark mode support`
+Local development uses Xcode 27; CI uses the default Xcode of GitHub's `macos-26` image.
 
-## Pull Request Process
+## Guidelines
 
-1. Update README if needed
-2. Add tests for new features
-3. Ensure CI passes
-4. Request review from maintainers
+- Keep views thin. Put arithmetic and parsing in pure functions and add tests for them,
+  including edge cases (zero, negative, `NaN`, empty collections, DST and locale differences).
+- Inject dependencies such as `UserDefaults`, clocks and network transports so code can be
+  tested without an App Group or a server.
+- Document public API with DocC comments. `xcodebuild docbuild` should report no warnings.
+- If you change a view shown in the README, regenerate the images with
+  `scripts/render-screenshots.sh`.
+- Swift code in README.md must come from `Examples/` or
+  `Tests/WidgetDevelopmentKitTests/ReadmeExamplesTests.swift`; `ReadmeSyncTests` fails
+  otherwise. Change the code there first, then copy it into the README.
+- README.md is translated into nine languages. Each `README.<lang>.md` starts with
+  `<!-- i18n-source: README.md@<sha> status=reviewed -->`, where `<sha>` is the output of
+  `git hash-object README.md` for the English text it follows. After changing README.md,
+  update the translations and that SHA; until then the translation check in `quality.yml`
+  reports them as behind.
+- Use [Conventional Commits](https://www.conventionalcommits.org/) (`feat:`, `fix:`, `docs:`,
+  `test:`, `refactor:`, `ci:`, `chore:`).
 
-## Code of Conduct
+## Pull requests
 
-Be respectful and constructive. We're all here to build great software together.
-
-## Questions?
-
-Open an issue or reach out!
+1. Create a branch from `main`.
+2. Make the change with tests.
+3. Make sure CI passes: the CI workflow (macOS tests, iOS builds and simulator tests),
+   Documentation, Examples, Lint and Quality (links, wording, translations).
+4. Describe what changed and why in the pull request.
