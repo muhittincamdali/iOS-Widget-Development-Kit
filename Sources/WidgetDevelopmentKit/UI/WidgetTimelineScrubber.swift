@@ -18,7 +18,10 @@ public struct WidgetTimelineScrubber<Content: View, Entry: TimelineEntry>: View 
 
     @State private var selectedIndex = 0
 
-    /// - Parameter widgetSize: Frame used for the preview; defaults to a small widget on a 6.1" iPhone.
+    /// - Parameters:
+    ///   - entries: The timeline entries to step through.
+    ///   - widgetSize: Frame used for the preview; defaults to a small widget on a 6.1" iPhone.
+    ///   - content: Builds the widget view for one entry.
     public init(
         entries: [Entry],
         widgetSize: CGSize = CGSize(width: 158, height: 158),

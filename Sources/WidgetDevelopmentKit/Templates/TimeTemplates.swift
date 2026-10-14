@@ -83,7 +83,12 @@ public struct CountdownWidget: View {
     let icon: String
     let accentColor: Color
 
-    /// - Parameter referenceDate: The timeline entry date; pass `entry.date` from your provider.
+    /// - Parameters:
+    ///   - title: Label next to the icon.
+    ///   - targetDate: The moment being counted down to.
+    ///   - referenceDate: The timeline entry date; pass `entry.date` from your provider.
+    ///   - icon: SF Symbol name.
+    ///   - accentColor: Color of the icon and digits.
     public init(
         title: String,
         targetDate: Date,

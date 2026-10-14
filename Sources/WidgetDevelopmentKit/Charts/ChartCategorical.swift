@@ -218,6 +218,8 @@ public struct WidgetActivityChart: View {
     ///   - activities: One array per week, each holding the values for its days.
     ///   - color: Color of the most active cells; lower levels use lower opacity.
     ///   - levels: Number of discrete intensity steps, including the empty level.
+    ///   - cellSize: Side length of each square cell, in points.
+    ///   - spacing: Gap between cells, in points.
     public init(
         activities: [[Double]],
         color: Color = .green,

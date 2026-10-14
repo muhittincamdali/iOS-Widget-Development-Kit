@@ -211,8 +211,12 @@ public struct StandByCountdownWidget: View {
     let referenceDate: Date
     let accentColor: Color
 
-    /// - Parameter referenceDate: The timeline entry date the countdown is computed from.
-    ///   Widgets render a static snapshot per entry, so pass `entry.date` here.
+    /// - Parameters:
+    ///   - eventName: Title shown above the countdown.
+    ///   - targetDate: The moment being counted down to.
+    ///   - referenceDate: The timeline entry date the countdown is computed from.
+    ///     Widgets render a static snapshot per entry, so pass `entry.date` here.
+    ///   - accentColor: Color of the digits.
     public init(
         eventName: String,
         targetDate: Date,

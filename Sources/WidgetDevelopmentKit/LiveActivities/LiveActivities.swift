@@ -15,7 +15,11 @@ public enum LiveActivities {
     }
 
     /// Requests a new Live Activity.
-    /// - Parameter staleAfter: Seconds after which the system marks the content as stale.
+    /// - Parameters:
+    ///   - attributes: The activity's static attributes.
+    ///   - state: The initial dynamic content.
+    ///   - staleAfter: Seconds after which the system marks the content as stale.
+    ///   - pushType: Pass `.token` to receive a push token for remote updates.
     public static func start<Attributes: ActivityAttributes>(
         _ attributes: Attributes,
         state: Attributes.ContentState,

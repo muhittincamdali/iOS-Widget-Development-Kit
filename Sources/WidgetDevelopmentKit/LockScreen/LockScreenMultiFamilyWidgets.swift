@@ -254,7 +254,11 @@ public struct LockScreenCountdownWidget: View {
     let referenceDate: Date
     let family: WidgetFamily
 
-    /// - Parameter referenceDate: The timeline entry date; pass `entry.date` from your provider.
+    /// - Parameters:
+    ///   - targetDate: The day being counted down to.
+    ///   - eventName: Shown in the rectangular and inline families.
+    ///   - referenceDate: The timeline entry date; pass `entry.date` from your provider.
+    ///   - family: The accessory family to lay out for.
     public init(
         targetDate: Date,
         eventName: String,
