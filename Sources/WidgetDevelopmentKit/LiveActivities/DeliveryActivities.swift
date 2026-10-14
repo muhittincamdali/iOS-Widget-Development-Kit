@@ -88,7 +88,9 @@ public struct DeliveryActivityView: View {
             }
 
             // Progress bar
-            ProgressView(value: Double(context.state.currentStep), total: Double(context.attributes.totalSteps))
+            ProgressView(
+                value: WidgetMath.fraction(Double(context.state.currentStep), of: Double(context.attributes.totalSteps))
+            )
                 .tint(context.state.status.color)
 
             HStack {
