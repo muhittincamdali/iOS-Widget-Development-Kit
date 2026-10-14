@@ -21,8 +21,10 @@ next release should be a new major version.
 
 - Unit tests with Swift Testing for the helper logic, timelines, snapshot store, deep links,
   hex colors, configuration entities, data loader and retry policy, state store, Live
-  Activity state machine and the README examples (74 tests on macOS; 77 on the iOS
-  simulator, which adds Live Activity state tests).
+  Activity state machine and the README examples; the iOS simulator run adds Live Activity
+  state tests.
+- `ReadmeSyncTests`, which fail when a Swift block in README.md no longer matches the code
+  in `Examples/` or `ReadmeExamplesTests.swift`.
 - `WidgetMath`, `WidgetFormat`, `MonthGrid` and `CountdownComponents`: pure helpers for
   progress clamping, compact numbers, playback times, month grids and countdowns.
 - `WidgetUpdatePolicy`, `TimelineBuilder`, `TimelineSchedule` and `WidgetSnapshotStore`,
@@ -31,10 +33,18 @@ next release should be a new major version.
 - `WidgetDeepLink`, `HexColor`, `RefreshIntervalOption`, `AccentColorOption` and
   `WidgetDevelopmentKitIntents`, reworked from `WidgetConfiguration.swift`.
 - `WidgetStateStore` and `SetValueIntent` / `RecordActionIntent` for interactive widgets.
-- DocC catalog with getting-started and interactive-widgets articles.
+- DocC catalog with getting-started and interactive-widgets articles, which `docs.yml` builds
+  and deploys to GitHub Pages.
+- `Examples/WidgetKitExample`: an iOS app with a widget extension (countdown, steps and
+  interactive water widgets) that builds against the package in the same commit.
+- README translations in Turkish, Simplified Chinese, Japanese, Korean, Spanish, German,
+  French, Brazilian Portuguese and Russian, with a banner, badges and buttons served from
+  the repository.
 - `scripts/render-screenshots.sh` and an opt-in test suite that renders the README images.
-- A single CI workflow: `swift build` and `swift test` on macOS, `xcodebuild test` on an iOS
-  simulator, and `xcodebuild docbuild`.
+- CI through the shared workflows in `muhittincamdali/.github`: `swift build` and
+  `swift test` on macOS, `xcodebuild` builds for iOS and macOS, tests on an iOS simulator,
+  DocC to GitHub Pages, link check, wording scan and README translation check. Separate
+  workflows build the example app and run SwiftLint.
 
 ### Changed
 
@@ -59,6 +69,8 @@ next release should be a new major version.
 - Division by zero and `NaN` progress in fitness, water, podcast, horizontal bar and progress
   ring views; force-unwrapped colors and URLs in the progress ring and shortcuts views.
 - A trap in timer views when the end date was before the start date.
+- `.swiftlint.yml` did not parse (an unquoted `*` started a YAML alias), so SwiftLint ran
+  with its default rules.
 - Day counts that truncated intervals instead of counting calendar days, and month grids
   that ignored the calendar's first weekday.
 - Duplicate `ForEach` identifiers in weekday headers and Lock Screen stats and events.
@@ -83,6 +95,8 @@ next release should be a new major version.
   could never receive.
 - The CocoaPods podspec, the Turkish README stub and ten CI workflows that did not build
   the package.
+- The repository's own code of conduct, security policy, issue forms, pull request template
+  and funding file; the shared files in `muhittincamdali/.github` apply instead.
 - Earlier entries in this file, which listed versions (2.x and 3.x) that were never tagged.
 
 ## [1.0.0] - 2026-02-02
