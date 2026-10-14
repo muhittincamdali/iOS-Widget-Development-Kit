@@ -268,8 +268,10 @@ public struct RectangularProgressWidget: View {
                     .foregroundStyle(.secondary)
             }
 
-            ProgressView(value: WidgetMath.clampedFraction(progress), total: 1.0)
-                .tint(.primary)
+            Gauge(value: WidgetMath.clampedFraction(progress)) {
+                EmptyView()
+            }
+            .gaugeStyle(.accessoryLinearCapacity)
         }
     }
 }
