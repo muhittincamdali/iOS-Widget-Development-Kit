@@ -1,0 +1,110 @@
+{
+  "name": "iOS Widget Development Kit",
+  "repository": "muhittincamdali/iOS-Widget-Development-Kit",
+  "tagline": {
+    "en": "SwiftUI views and timeline helpers for WidgetKit widgets and Live Activities.",
+    "tr": "WidgetKit widget'ları ve Live Activities için SwiftUI görünümleri ve zaman çizelgesi yardımcıları.",
+    "zh-CN": "用于 WidgetKit 小组件和 Live Activities 的 SwiftUI 视图与时间线辅助工具。",
+    "ja": "WidgetKit ウィジェットと Live Activities のための SwiftUI ビューとタイムラインヘルパー。",
+    "ko": "WidgetKit 위젯과 Live Activities를 위한 SwiftUI 뷰와 타임라인 헬퍼.",
+    "es": "Vistas SwiftUI y utilidades de línea de tiempo para widgets de WidgetKit y Live Activities.",
+    "de": "SwiftUI-Views und Timeline-Hilfen für WidgetKit-Widgets und Live Activities.",
+    "fr": "Vues SwiftUI et utilitaires de timeline pour les widgets WidgetKit et les Live Activities.",
+    "pt-BR": "Views SwiftUI e utilitários de timeline para widgets do WidgetKit e Live Activities.",
+    "ru": "SwiftUI-представления и помощники для таймлайнов виджетов WidgetKit и Live Activities."
+  },
+  "tags": {
+    "en": [
+      "WidgetKit",
+      "Live Activities",
+      "App Intents",
+      "Swift Charts"
+    ],
+    "tr": [
+      "WidgetKit",
+      "Live Activities",
+      "App Intents",
+      "Swift Charts"
+    ],
+    "zh-CN": [
+      "WidgetKit",
+      "Live Activities",
+      "App Intents",
+      "Swift Charts"
+    ],
+    "ja": [
+      "WidgetKit",
+      "Live Activities",
+      "App Intents",
+      "Swift Charts"
+    ],
+    "ko": [
+      "WidgetKit",
+      "Live Activities",
+      "App Intents",
+      "Swift Charts"
+    ],
+    "es": [
+      "WidgetKit",
+      "Live Activities",
+      "App Intents",
+      "Swift Charts"
+    ],
+    "de": [
+      "WidgetKit",
+      "Live Activities",
+      "App Intents",
+      "Swift Charts"
+    ],
+    "fr": [
+      "WidgetKit",
+      "Live Activities",
+      "App Intents",
+      "Swift Charts"
+    ],
+    "pt-BR": [
+      "WidgetKit",
+      "Live Activities",
+      "App Intents",
+      "Swift Charts"
+    ],
+    "ru": [
+      "WidgetKit",
+      "Live Activities",
+      "App Intents",
+      "Swift Charts"
+    ]
+  },
+  "motif": "widgets",
+  "buttons": [
+    "start",
+    "docs",
+    "examples"
+  ],
+  "links": {
+    "docs": "https://muhittincamdali.github.io/iOS-Widget-Development-Kit/documentation/widgetdevelopmentkit/",
+    "examples": "Examples/"
+  },
+  "languages": [
+    "en",
+    "tr",
+    "zh-CN",
+    "ja",
+    "ko",
+    "es",
+    "de",
+    "fr",
+    "pt-BR",
+    "ru"
+  ],
+  "docc": {
+    "targets": [
+      "WidgetDevelopmentKit"
+    ]
+  },
+  "socialTheme": "dark",
+  "badgeOverrides": {
+    "version": ""
+  },
+  "extraBadges": []
+}
