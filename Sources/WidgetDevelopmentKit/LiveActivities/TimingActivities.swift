@@ -12,12 +12,20 @@ public struct TimerAttributes: ActivityAttributes {
     public struct ContentState: Codable, Hashable {
         public var endTime: Date
         public var isPaused: Bool
+        /// Time left when the timer was paused. Shown instead of the running timer while
+        /// `isPaused` is `true`; `nil` while paused reads `0:00`.
         public var pausedTimeRemaining: TimeInterval?
 
         public init(endTime: Date, isPaused: Bool = false, pausedTimeRemaining: TimeInterval? = nil) {
             self.endTime = endTime
             self.isPaused = isPaused
             self.pausedTimeRemaining = pausedTimeRemaining
+        }
+
+        /// Fixed label for a paused timer, or `nil` while the timer runs.
+        public var pausedLabel: String? {
+            guard isPaused else { return nil }
+            return WidgetFormat.playbackTime(pausedTimeRemaining ?? 0)
         }
     }
 
@@ -66,7 +74,7 @@ public struct TimerActivityView: View {
                 }
             }
 
-            Text(context.state.endTime, style: .timer)
+            remainingText
                 .font(.system(size: 48, weight: .thin, design: .rounded))
                 .monospacedDigit()
                 .foregroundStyle(color)
@@ -83,15 +91,23 @@ public struct TimerActivityView: View {
     }
 
     public var compactTrailing: some View {
-        Text(context.state.endTime, style: .timer)
+        remainingText
             .font(.caption)
             .monospacedDigit()
     }
 
     public var minimal: some View {
-        Text(context.state.endTime, style: .timer)
+        remainingText
             .font(.caption2)
             .monospacedDigit()
+    }
+
+    /// `Text(_:style: .timer)` keeps counting, so a paused timer shows a fixed value.
+    private var remainingText: Text {
+        if let pausedLabel = context.state.pausedLabel {
+            return Text(pausedLabel)
+        }
+        return Text(context.state.endTime, style: .timer)
     }
 }
 

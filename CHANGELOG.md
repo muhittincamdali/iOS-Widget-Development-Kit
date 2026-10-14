@@ -61,6 +61,8 @@ next release should be a new major version.
 - Duplicate `ForEach` identifiers in weekday headers and Lock Screen stats and events.
 - Network requests that were retried on 4xx responses and waited for connectivity inside the
   widget extension.
+- `TimerActivityView` kept counting down while `isPaused` was set; a paused timer now shows
+  `pausedTimeRemaining` as a fixed value.
 
 ### Removed
 
