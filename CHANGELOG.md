@@ -53,6 +53,8 @@ next release should be a new major version.
 ### Fixed
 
 - A string literal in `QuoteWidget` that did not compile.
+- The habit tracker header read "7 Day Streak" regardless of the streaks; it now reads
+  "Last 7 days", which is what the dots show.
 - Division by zero and `NaN` progress in fitness, water, podcast, horizontal bar and progress
   ring views; force-unwrapped colors and URLs in the progress ring and shortcuts views.
 - A trap in timer views when the end date was before the start date.

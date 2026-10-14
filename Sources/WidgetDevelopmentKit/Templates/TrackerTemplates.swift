@@ -136,7 +136,7 @@ public struct HabitTrackerWidget: View {
                 Text("Habits")
                     .font(.headline)
                 Spacer()
-                Text("7 Day Streak")
+                Text("Last 7 days")
                     .font(.caption)
                     .foregroundStyle(.secondary)
             }
